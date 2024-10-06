@@ -1,0 +1,42 @@
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+* {
+  margin: 5px 0;
+}
+
+body {
+  max-width: 700px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: #111;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact-icon {
+  margin: 0 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
