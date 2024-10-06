@@ -1,35 +1,4 @@
+@use 'vars';
+@use 'base';
 @use 'typography';
-
-$primary-color: #111;
-
-* {
-  margin: 5px 0;
-}
-
-body {
-  max-width: 700px;
-  margin: auto;
-}
-
-a {
-  text-decoration: none;
-  color: $primary-color;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:visited {
-    text-decoration: none;
-    color: $primary-color;
-  }
-}
-
-.center {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.contact-icon {
-  margin: 0 5px;
-}
+@use 'header';

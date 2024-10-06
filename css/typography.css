@@ -6,7 +6,12 @@
 }
 
 h1 {
+  font-size: 2.5rem;
   font-weight: 700;
+}
+
+.subtext {
+  color: #666;
 }
 
 /*# sourceMappingURL=typography.css.map */

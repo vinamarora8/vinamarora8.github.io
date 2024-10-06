@@ -1,21 +1,5 @@
 * {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-h1 {
-  font-weight: 700;
-}
-
-* {
   margin: 5px 0;
-}
-
-body {
-  max-width: 700px;
-  margin: auto;
 }
 
 a {
@@ -30,13 +14,68 @@ a:visited {
   color: #111;
 }
 
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
 .center {
   text-align: center;
   margin: 0 auto;
 }
 
-.contact-icon {
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.subtext {
+  color: #666;
+}
+
+.header .contact-icon {
   margin: 0 5px;
+}
+.header .headshot {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+.header .header-grid {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  column-gap: 50px;
+}
+.header .header-grid > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator {
+  width: 80%;
+  height: 1px;
+  background-color: #999;
+  margin: 20px auto;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+* {
+  margin: 5px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: #111;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+/*# sourceMappingURL=base.css.map */

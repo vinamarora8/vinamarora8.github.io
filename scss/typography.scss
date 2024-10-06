@@ -1,3 +1,5 @@
+@use 'vars';
+
 * {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -6,5 +8,13 @@
 }
 
 h1 {
+    font-size: 2.5rem;
     font-weight: 700;
+}
+
+
+.subtext {
+    color: #666;
+    //font-size: 0.9rem;
+    //font-weight: 300;
 }
