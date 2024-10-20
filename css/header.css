@@ -1,3 +1,6 @@
+.header {
+  text-align: center;
+}
 .header .contact-icon {
   margin: 0 5px;
 }
@@ -5,16 +8,25 @@
   width: 200px;
   height: auto;
   border-radius: 50%;
+  margin: auto;
 }
 .header .header-grid {
   display: inline-grid;
-  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
   column-gap: 50px;
 }
 .header .header-grid > div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 700px) {
+  .header .header-grid {
+    grid-template-columns: auto auto;
+  }
+  .header .header-info {
+    text-align: left;
+  }
 }
 
 .separator {
