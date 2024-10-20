@@ -2,45 +2,69 @@
   margin: 5px 0;
 }
 
-a {
+.simple-link {
   text-decoration: none;
   color: #111;
 }
-a:hover {
+.simple-link:hover {
   text-decoration: none;
 }
-a:visited {
+.simple-link:visited {
   text-decoration: none;
   color: #111;
 }
 
-.container {
-  max-width: 700px;
-  margin: auto;
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 700px;
+    margin: auto;
+  }
 }
-
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: calc(100vw - 50px);
+    margin: auto;
+  }
+}
 .center {
   text-align: center;
   margin: 0 auto;
 }
 
-.left-align {
-  text-align: left;
-}
-
-.right-align {
-  text-align: right;
+.text-align-center {
+  text-align: center;
 }
 
 .text-align-left {
   text-align: left;
 }
 
+.text-align-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.vertical-gap {
+  height: 15px;
+}
+
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
+}
+
+it {
+  font-style: italic;
+}
+
+b {
+  font-weight: 500;
 }
 
 h1 {
@@ -48,8 +72,14 @@ h1 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
 .subtext {
   color: #666;
+  font-weight: 400;
 }
 
 .header .contact-icon {
@@ -76,6 +106,45 @@ h1 {
   height: 1px;
   background-color: #999;
   margin: 20px auto;
+}
+
+.about-me {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.paper-container {
+  background-color: rgba(227, 227, 227, 0.1647058824);
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.paper-container .paper-title {
+  font-weight: 400;
+  font-size: 1.25em;
+}
+.paper-container .paper-authors {
+  font-weight: 300;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.paper-container .paper-venue {
+  margin: 5px 0;
+}
+.paper-container .paper-links-container {
+  margin-left: -5px;
+}
+.paper-container .paper-links-container .paper-link {
+  display: inline-block;
+  padding: 5px 7px;
+  margin: 5px 1px;
+  background-color: #d3ecff;
+  border-radius: 4px;
+  box-shadow: #c2d9ea 1px 1px 0px 0px;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #42494f;
 }
 
 /*# sourceMappingURL=style.css.map */

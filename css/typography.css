@@ -1,8 +1,16 @@
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
+}
+
+it {
+  font-style: italic;
+}
+
+b {
+  font-weight: 500;
 }
 
 h1 {
@@ -10,8 +18,14 @@ h1 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
 .subtext {
   color: #666;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=typography.css.map */
