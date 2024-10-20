@@ -130,10 +130,11 @@ h3 {
 }
 
 .paper-container {
-  background-color: rgba(227, 227, 227, 0.1647058824);
   padding: 10px 15px;
   margin-bottom: 10px;
   border-radius: 4px;
+  background-color: rgba(224, 237, 248, 0.1215686275);
+  box-shadow: #eee 1px 1px 0px 0px;
 }
 .paper-container .paper-title {
   font-weight: 400;
@@ -153,7 +154,7 @@ h3 {
 }
 .paper-container .paper-links-container .paper-link {
   display: inline-block;
-  padding: 5px 7px;
+  padding: 5px 7px 3px 7px;
   margin: 5px 1px;
   background-color: #d3ecff;
   border-radius: 4px;
@@ -161,6 +162,9 @@ h3 {
   font-size: 0.8em;
   font-weight: 500;
   color: #42494f;
+}
+.paper-container .paper-links-container .paper-link i {
+  margin-right: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
