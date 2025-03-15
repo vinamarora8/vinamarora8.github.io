@@ -7,7 +7,12 @@ import TiltEffect from './TiltEffect';
 const Profile: React.FC = () => {
     return (
         <div className="profile">
-            <AnimateIn className="profile__left" baseDelay={0.1} direction="left" staggerDelay={0.1}>
+            <AnimateIn
+                className="profile__left"
+                baseDelay={0.1}
+                direction="left"
+                staggerDelay={0.1}
+            >
                 <TiltEffect maxTiltDegrees={5} shadowIntensity={0.05}>
                     <div className="profile__left__image">
                         <ProgressiveImage
@@ -29,7 +34,12 @@ const Profile: React.FC = () => {
             </AnimateIn>
 
             <div className="profile__right">
-                <AnimateIn className="profile__right__bio" baseDelay={0.2} direction="right" staggerDelay={0.05}>
+                <AnimateIn
+                    className="profile__right__bio"
+                    baseDelay={0.2}
+                    direction="right"
+                    staggerDelay={0.05}
+                >
                     <p>
                         I am a Ph.D. student in Machine Learning at the Georgia Institute of
                         Technology, where I conduct my research at the{' '}
