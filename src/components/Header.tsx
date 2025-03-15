@@ -11,7 +11,7 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ 
               duration: 0.7, 
-              ease: [0.22, 1, 0.36, 1] // Custom easing for a nice bounce
+              ease: [0.22, 0.4, 0.36, 1] // Custom easing for a nice bounce
             }}
           >
             <Textfit 
