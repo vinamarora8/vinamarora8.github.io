@@ -64,15 +64,14 @@ const Publications: React.FC = () => {
                   {publication.venue}, {publication.year}
                 </div>
 
-                {publication.isAbstractVisible && publication.abstract && (
-                  <AnimateIn
-                    baseDelay={0.0}
-                    direction="down"
-                    className="publications__details__abstract"
-                  >
-                    {publication.abstract}
-                  </AnimateIn>
-                )}
+                <div className={`publications__details__abstract ${
+                  publication.isAbstractVisible ? `publications__details__abstract--visible`: ''
+                }`}>
+                  <div style={{height: 15}}></div>
+                  <span style={{fontWeight: 400}}>Abstract: </span>
+                  {publication.abstract}
+                  <div style={{height: 15}}></div>
+                </div>
 
                 <div className="publications__details__links">
                   {publication.links.paper && (
