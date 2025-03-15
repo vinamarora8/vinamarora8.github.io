@@ -1,48 +1,59 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaEnvelope, FaGraduationCap } from 'react-icons/fa';
+import AnimateIn from './AnimateIn';
+import AnimateSocialLinks from './AnimateSocialLinks';
 
 const Profile: React.FC = () => {
   return (
       <div className="profile">
         <div className="profile__left">
-            <img 
-                src="/images/profile-image.jpg" 
-                alt="Vinam Arora" 
-                className="profile__left__image"
-            />
+            <AnimateIn delay={0.1} direction="left">
+              <img 
+                  src="/images/profile-image.jpg" 
+                  alt="Vinam Arora" 
+                  className="profile__left__image"
+              />
+            </AnimateIn>
 
-            <div className="profile__left__title">
-                Machine Learning Ph.D. Student<br />
-                @ Georgia Tech
-            </div>
+            <AnimateIn delay={0.2} direction="left">
+              <div className="profile__left__title">
+                  Machine Learning Ph.D. Student<br />
+                  @ Georgia Tech
+              </div>
+            </AnimateIn>
 
-            <div className="profile__left__location">
-            <FaMapMarkerAlt /> <p>Atlanta, Georgia, USA</p>
-            </div>
-
+            <AnimateIn delay={0.3} direction="left">
+              <div className="profile__left__location">
+                <FaMapMarkerAlt /> <p>Atlanta, Georgia, USA</p>
+              </div>
+            </AnimateIn>
         </div>
 
         <div className="profile__right">
             <div className="profile__right__bio">
-                <p>
-                    I am a Ph.D. student in Machine Learning at the Georgia
-                    Institute of Technology, where I conduct my research at the <a href="https://dyerlab.gatech.edu/" 
-                    target="_blank" rel="noopener noreferrer">NerDS Lab</a> and
-                    am advised by <a href="https://dyerlab.gatech.edu/people/pi-profile/" 
-                    target="_blank" rel="noopener noreferrer">Prof. Eva Dyer</a>.
-                    My areas of interest are Self-supervised Learning and Learning
-                    from large-scale data. I like working with challenging datasets
-                    and am actively working on developing deep learning methods
-                    for computational neuroscience, graphs, and timeseries.
-                </p>
-                <p>
-                    I did my undergrad in ECE from the Indian Institute of
-                    Technology - Roorkee (IIT-R). Before diving into machine
-                    learning research, I used to work as a chip-design engineer.
-                </p>
+                <AnimateIn delay={0.2} direction="right">
+                  <p>
+                      I am a Ph.D. student in Machine Learning at the Georgia
+                      Institute of Technology, where I conduct my research at the <a href="https://dyerlab.gatech.edu/" 
+                      target="_blank" rel="noopener noreferrer">NerDS Lab</a> and
+                      am advised by <a href="https://dyerlab.gatech.edu/people/pi-profile/" 
+                      target="_blank" rel="noopener noreferrer">Prof. Eva Dyer</a>.
+                      My areas of interest are Self-supervised Learning and Learning
+                      from large-scale data. I like working with challenging datasets
+                      and am actively working on developing deep learning methods
+                      for computational neuroscience, graphs, and timeseries.
+                  </p>
+                </AnimateIn>
+                <AnimateIn delay={0.3} direction="right">
+                  <p>
+                      I did my undergrad in ECE from the Indian Institute of
+                      Technology - Roorkee (IIT-R). Before diving into machine
+                      learning research, I used to work as a chip-design engineer.
+                  </p>
+                </AnimateIn>
             </div>
 
-            <div className="profile__right__social-links">
+            <AnimateSocialLinks baseDelay={0.5} staggerDelay={0.1} className="profile__right__social-links">
                 <a 
                     href="https://scholar.google.com/citations?user=XHVqHR4AAAAJ&hl=en" 
                     target="_blank" 
@@ -81,7 +92,7 @@ const Profile: React.FC = () => {
                     <FaEnvelope />
                     <p>Email</p>
                 </a>
-            </div>
+            </AnimateSocialLinks>
         </div>
       </div>
   )
