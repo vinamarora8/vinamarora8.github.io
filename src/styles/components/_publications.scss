@@ -7,20 +7,23 @@
     gap: 2rem;
   }
 
+  $abstract-button-size: 9px;
+  $gradient-start: #ffaec2;
+  $gradient-end: #7ec3ff;
+
   &__item {
     $border-width: 6px;
     $border-radius: 3px;
-    $gradient-end: #7ec3ff;
-    $gradient-start: #ffaec2;
 
     display: flex;
+    flex-direction: row;
+    gap: $abstract-button-size;
     border-left: $border-width solid #e0e0e0;
     border-radius: $border-radius;
-    padding: 10px 16px;
+    padding: $abstract-button-size;
     position: relative;
     height: 100%;
     transition: all 0.3s ease-in-out;
-    cursor: pointer;
 
     &::before {
       content: '';
@@ -43,8 +46,23 @@
     }
   }
 
+  &__abstract-button {
+    width: $abstract-button-size;
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &--invert {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      color: $gradient-start;
+    }
+  }
+
+
   &__content {
-    flex: 1;
     font-size: 15px;
   }
 

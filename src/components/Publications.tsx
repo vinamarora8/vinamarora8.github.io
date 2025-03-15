@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFilePdf, FaImage, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaFilePdf, FaImage, FaExternalLinkAlt, FaAngleDown } from 'react-icons/fa';
 import AnimateIn from './AnimateIn';
 import publicationsData from '../data/publications.yaml';
 
@@ -47,8 +47,16 @@ const Publications: React.FC = () => {
           <div
             key={index}
             className="publications__item"
-            onClick={() => publication.setAbstractVisible(!publication.isAbstractVisible)}
           >
+            <div>
+              <FaAngleDown 
+              className={
+                `publications__abstract-button 
+                ${publication.isAbstractVisible ? 'publications__abstract-button--invert' : ''}`}
+                onClick={() => publication.setAbstractVisible(!publication.isAbstractVisible)}
+              />
+            </div>
+
             <div className="publications__content">
               <h3 className="publications__title">{publication.title}</h3>
               <div className="publications__authors">
