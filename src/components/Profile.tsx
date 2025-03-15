@@ -55,8 +55,12 @@ const Profile: React.FC = () => {
                                 rel="noopener noreferrer"
                             >
                                 Prof. Eva Dyer
-                            </a>
-                            . My areas of interest are Self-supervised Learning and Learning from
+                            </a>.
+                        </p>
+                    </AnimateIn>
+                    <AnimateIn delay={0.25} direction="right">
+                        <p>
+                            My areas of interest are Self-supervised Learning and Learning from
                             large-scale data. I like working with challenging datasets and am
                             actively working on developing deep learning methods for computational
                             neuroscience, graphs, and timeseries.
