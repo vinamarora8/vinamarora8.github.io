@@ -12,7 +12,7 @@ const Profile: React.FC = () => {
             />
 
             <div className="profile__left__title">
-                Machine Learning PhD Student<br />
+                Machine Learning Ph.D. Student<br />
                 @ Georgia Tech
             </div>
 
