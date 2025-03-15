@@ -3,20 +3,23 @@ import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaEnvelope, FaGraduationCap } fro
 import AnimateIn from './AnimateIn';
 import AnimateSocialLinks from './AnimateSocialLinks';
 import ProgressiveImage from './ProgressiveImage';
+import TiltEffect from './TiltEffect';
 
 const Profile: React.FC = () => {
   return (
       <div className="profile">
         <div className="profile__left">
             <AnimateIn delay={0.1} direction="left">
-              <div className="profile__left__image-container">
-                <ProgressiveImage 
-                  lowResSrc="/images/profile-image-low.jpg"
-                  highResSrc="/images/profile-image.jpg" 
-                  alt="Vinam Arora" 
-                  className="profile__left__image"
-                />
-              </div>
+                <TiltEffect maxTiltDegrees={5} shadowIntensity={0.05}>
+                    <div className="profile__left__image-container">
+                        <ProgressiveImage 
+                        lowResSrc="/images/profile-image-low.jpg"
+                        highResSrc="/images/profile-image.jpg" 
+                        alt="Vinam Arora" 
+                        className="profile__left__image"
+                        />
+                    </div>
+                </TiltEffect>
             </AnimateIn>
 
             <AnimateIn delay={0.2} direction="left">
