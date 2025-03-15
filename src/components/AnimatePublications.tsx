@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef } from 'react';
+import React, { ReactNode, useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 interface AnimatePublicationsProps {
@@ -13,7 +13,7 @@ const AnimatePublications: React.FC<AnimatePublicationsProps> = ({
     children,
     baseDelay = 0.2,
     staggerDelay = 0.2,
-    threshold = 0.1, // Default to 10% visibility
+    threshold = 0.04, // Default to 10% visibility
     once = true, // Default to trigger only once
 }) => {
     const ref = useRef(null);
@@ -21,6 +21,27 @@ const AnimatePublications: React.FC<AnimatePublicationsProps> = ({
         amount: threshold, 
         once: once 
     });
+    
+    // Track if this is the initial render
+    const [isInitialRender, setIsInitialRender] = useState(true);
+    
+    // Track if the element was in view during initial render
+    const [wasInitiallyInView, setWasInitiallyInView] = useState(false);
+    
+    useEffect(() => {
+        // Check if element is in view on initial render
+        if (isInitialRender && isInView) {
+            setWasInitiallyInView(true);
+        }
+        
+        // After first render, set isInitialRender to false
+        if (isInitialRender) {
+            setIsInitialRender(false);
+        }
+    }, [isInView, isInitialRender]);
+    
+    // Only apply baseDelay if element was not in view during initial render
+    const effectiveBaseDelay = wasInitiallyInView ? baseDelay : 0;
 
     // Container animation
     const containerVariants = {
@@ -28,7 +49,7 @@ const AnimatePublications: React.FC<AnimatePublicationsProps> = ({
         visible: {
             opacity: 1,
             transition: {
-                delayChildren: baseDelay,
+                delayChildren: effectiveBaseDelay,
                 staggerChildren: staggerDelay,
             },
         },
