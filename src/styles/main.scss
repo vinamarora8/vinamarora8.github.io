@@ -3,6 +3,7 @@
 @use "components/header";
 @use "components/profile";
 @use "components/publications";
+@use "components/footer";
 
 /* Import Source Serif Pro font */
 @import '@fontsource/source-serif-pro/300.css';
@@ -66,9 +67,4 @@ img {
   }
 }
 
-.footer {
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 0.9rem;
-  color: $secondary-color;
-} 
+// Remove the footer styling from here 
