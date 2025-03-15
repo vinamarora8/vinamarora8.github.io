@@ -55,7 +55,8 @@ const Profile: React.FC = () => {
                   <p>
                       I did my undergrad in ECE from the Indian Institute of
                       Technology - Roorkee (IIT-R). Before diving into machine
-                      learning research, I used to work as a chip-design engineer.
+                      learning research, I used to work as a chip-design engineer
+                      at Texas Instruments.
                   </p>
                 </AnimateIn>
             </div>
