@@ -59,63 +59,17 @@ img {
   padding: 2rem 0;
 }
 
+.section {
+  margin-top: 40px;
+
+  &-title {
+    font-size: 30px;;
+  }
+}
 
 @import "components/header";
 @import "components/profile";
-
-.publications {
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  &__item {
-    display: flex;
-    border-left: 4px solid #e0e0e0;
-    padding-left: 1rem;
-    
-    &:hover {
-      border-left-color: $accent-color;
-    }
-  }
-  
-  &__content {
-    flex: 1;
-  }
-  
-  &__title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  &__authors {
-    font-size: 0.9rem;
-    color: $secondary-color;
-    margin-bottom: 0.5rem;
-  }
-  
-  &__venue {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  &__links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
-    
-    a {
-      display: flex;
-      align-items: center;
-      font-size: 0.9rem;
-      
-      svg {
-        margin-right: 0.25rem;
-      }
-    }
-  }
-}
+@import "components/publications";
 
 .footer {
   text-align: center;
