@@ -1,31 +1,43 @@
 import React, { ReactNode, useState } from "react";
-import { FaAngleDown } from "react-icons/fa6";
+import { FaChevronDown } from "react-icons/fa6";
 
 interface AccordianProps {
   children: (props: { isExpanded: boolean }) => ReactNode;
+  customToggle?: (props: { 
+    isExpanded: boolean, 
+    toggleExpanded: () => void 
+  }) => ReactNode;
 }
 
-const Accordian: React.FC<AccordianProps> = ({ children }) => {
+const Accordian: React.FC<AccordianProps> = ({ children, customToggle }) => {
   const [isExpanded, setExpanded] = useState(false);
+  
+  const toggleExpanded = () => setExpanded(!isExpanded);
+
+  const defaultToggle = (
+    <div
+      className="accordian__container"
+      onClick={toggleExpanded}
+    >
+      <div className="accordian__border"/>
+      <div className="accordian__button">
+        <FaChevronDown
+          style={{ transform: isExpanded ? 'rotate(180deg)' : '' }}
+          strokeWidth="30px"
+        />
+      </div>
+    </div>
+  );
 
   return (
     <div className="accordian">
-      <div
-        className="accordian__container"
-        onClick={() => setExpanded(!isExpanded)}
-      >
-        <div className="accordian__border"/>
-        <div className="accordian__button">
-          <FaAngleDown
-            style={{ transform: isExpanded ? 'rotate(180deg)' : '' }}
-            strokeWidth="30px"
-          />
-        </div>
-      </div>
+      {customToggle 
+        ? customToggle({ isExpanded, toggleExpanded }) 
+        : defaultToggle}
 
       {children({ isExpanded })}
     </div>
-  )
+  );
 }
 
-export default Accordian
+export default Accordian;
