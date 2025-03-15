@@ -25,7 +25,7 @@ const Publications: React.FC = () => {
                 <h2 className="section-title">My Publications</h2>
             </AnimateIn>
 
-            <AnimateIn baseDelay={0.3} staggerDelay={0.2} direction="right">
+            <AnimateIn className="publications__list" baseDelay={0.3} staggerDelay={0.2} direction="right">
                 {(publicationsData as Publication[]).map((publication, index) => (
                     <div key={index} className="publications__item">
                         <div className="publications__content">
