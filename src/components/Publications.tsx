@@ -44,17 +44,17 @@ const Publications: React.FC = () => {
         direction="right"
       >
         {publicationList.map((publication, index) => (
-          <div
-            key={index}
-            className="publications__item"
-          >
-            <div>
-              <FaAngleDown 
-              className={
-                `publications__abstract-button 
-                ${publication.isAbstractVisible ? 'publications__abstract-button--invert' : ''}`}
-                onClick={() => publication.setAbstractVisible(!publication.isAbstractVisible)}
-              />
+          <div key={index} className="publications__item">
+            <div
+              className="publications__abstract-button"
+              onClick={() => publication.setAbstractVisible(!publication.isAbstractVisible)}
+            >
+              <div className="publications__abstract-button__border"></div>
+              <div className="publications__abstract-button__container">
+                <FaAngleDown
+                  style={{transform: publication.isAbstractVisible ? "rotate(180deg)" : ""}}
+                />
+              </div>
             </div>
 
             <div className="publications__content">
