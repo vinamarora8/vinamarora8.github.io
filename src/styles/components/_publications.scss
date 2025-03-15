@@ -7,76 +7,9 @@
     gap: 2rem;
   }
 
-  $abstract-button-size: 9px;
-
-  &__item {
-    display: flex;
-    flex-direction: row;
-    gap: $abstract-button-size;
-
-    &:hover {
-      // Add gradient to the left-border
-      .publications__abstract-button__border::before {
-        opacity: 1;
-      }
-    }
-  }
-
-  &__abstract-button {
-    $gradient-start: #ffaec2;
-    $gradient-end: #7ec3ff;
-    $border-width: 6px;
-    $border-radius: 3px;
-
-    display: flex;
-    flex-direction: row;
-    gap: $abstract-button-size;
-    cursor: pointer;
-
-    &__container {
-      margin-top: $abstract-button-size;
-
-      svg {
-        color: #aaa;
-        width: $abstract-button-size;
-        transition: all 0.2s ease-in-out;
-      }
-      &__invert {
-        transform: rotate(180deg);
-      }
-    }
-
-    &__border {
-      background-color: #e0e0e0;
-      border-radius: $border-radius 0 0 $border-radius;
-      width: $border-width;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: $border-width;
-        height: 100%;
-        background: linear-gradient(to bottom, $gradient-start, $gradient-end);
-        border-radius: $border-radius 0 0 $border-radius;
-        z-index: 1;
-        opacity: 0;
-        transition: all 0.1s ease-in;
-      }
-    }
-
-    &:hover {
-      svg {
-        color: $gradient-start;
-      }
-    }
-  }
-
   &__content {
     font-size: 15px;
-    margin: $abstract-button-size 0;
+    margin: 9px 0;
   }
 
   &__title {

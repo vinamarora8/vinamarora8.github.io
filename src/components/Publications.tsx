@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFilePdf, FaImage, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaFilePdf, FaImage, FaLink } from 'react-icons/fa6';
 import AnimateIn from './AnimateIn';
 import publicationsData from '../data/publications.yaml';
 import Accordian from './Accordian';
@@ -93,7 +93,7 @@ const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publi
 
           {pub.links.project && (
             <a href={pub.links.project} target="_blank" rel="noopener noreferrer">
-              <FaExternalLinkAlt /> <p>Project Page</p>
+              <FaLink /> <p>Project Page</p>
             </a>
           )}
 
@@ -109,7 +109,7 @@ const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publi
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaExternalLinkAlt /> <p>OpenReview</p>
+              <FaLink /> <p>OpenReview</p>
             </a>
           )}
         </div>

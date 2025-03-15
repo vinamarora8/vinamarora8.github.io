@@ -9,13 +9,13 @@ const Accordian: React.FC<AccordianProps> = ({ children }) => {
   const [isExpanded, setExpanded] = useState(false);
 
   return (
-    <div className="publications__item">
+    <div className="accordian">
       <div
-        className="publications__abstract-button"
+        className="accordian__container"
         onClick={() => setExpanded(!isExpanded)}
       >
-        <div className="publications__abstract-button__border"/>
-        <div className="publications__abstract-button__container">
+        <div className="accordian__border"/>
+        <div className="accordian__button">
           <FaAngleDown
             style={{ transform: isExpanded ? 'rotate(180deg)' : '' }}
           />
