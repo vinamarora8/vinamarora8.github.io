@@ -1,8 +1,10 @@
 import React from 'react';
-import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaEnvelope, FaGraduationCap } from 'react-icons/fa';
+import { FaLocationDot, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6';
 import AnimateIn from './AnimateIn';
 import ProgressiveImage from './ProgressiveImage';
 import TiltEffect from './TiltEffect';
+import { LiaGraduationCapSolid } from 'react-icons/lia';
+import { FaGraduationCap } from 'react-icons/fa';
 
 const Profile: React.FC = () => {
   return (
@@ -24,7 +26,7 @@ const Profile: React.FC = () => {
         </div>
 
         <div className="profile__left__location">
-          <FaMapMarkerAlt /> <p>Atlanta, Georgia, USA</p>
+          <FaLocationDot /> <p>Atlanta, Georgia, USA</p>
         </div>
       </AnimateIn>
 

@@ -1,8 +1,11 @@
 import React from 'react';
-import { FaFilePdf, FaImage, FaLink } from 'react-icons/fa6';
 import AnimateIn from './AnimateIn';
 import publicationsData from '../data/publications.yaml';
 import Accordian from './Accordian';
+import { GoCommentDiscussion } from 'react-icons/go';
+import { PiPresentation } from 'react-icons/pi';
+import { CgWebsite } from 'react-icons/cg';
+import { IoLinkOutline } from 'react-icons/io5';
 
 interface Publication {
   title: string;
@@ -82,25 +85,25 @@ const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publi
       <div className="publications__links">
         {pub.links.paper && (
           <a href={pub.links.paper} target="_blank" rel="noopener noreferrer">
-            <FaFilePdf /> <p>Paper</p>
+            <CgWebsite /> <p>Paper</p>
           </a>
         )}
 
         {pub.links.project && (
           <a href={pub.links.project} target="_blank" rel="noopener noreferrer">
-            <FaLink /> <p>Project Page</p>
+            <IoLinkOutline /> <p>Project Page</p>
           </a>
         )}
 
         {pub.links.poster && (
           <a href={pub.links.poster} target="_blank" rel="noopener noreferrer">
-            <FaImage /> <p>Poster</p>
+            <PiPresentation /> <p>Poster</p>
           </a>
         )}
 
         {pub.links.openReview && (
           <a href={pub.links.openReview} target="_blank" rel="noopener noreferrer">
-            <FaLink /> <p>OpenReview</p>
+            <GoCommentDiscussion /> <p>OpenReview</p>
           </a>
         )}
       </div>
