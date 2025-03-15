@@ -18,6 +18,7 @@ const Accordian: React.FC<AccordianProps> = ({ children }) => {
         <div className="accordian__button">
           <FaAngleDown
             style={{ transform: isExpanded ? 'rotate(180deg)' : '' }}
+            strokeWidth="30px"
           />
         </div>
       </div>

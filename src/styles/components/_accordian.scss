@@ -7,7 +7,6 @@
 
   display: flex;
   flex-direction: row;
-
   gap: $abstract-button-size;
 
   &:hover {
@@ -22,6 +21,12 @@
     flex-direction: row;
     gap: $abstract-button-size;
     cursor: pointer;
+
+    &:hover {
+      .accordian__button svg {
+        color: $gradient-start;
+      }
+    }
   }
 
   &__button {
@@ -37,11 +42,6 @@
       transform: rotate(180deg);
     }
 
-    &:hover {
-      svg {
-        color: $gradient-start;
-      }
-    }
   }
 
   &__border {
