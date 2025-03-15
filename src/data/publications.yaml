@@ -1,0 +1,43 @@
+- title: "Multi-session, multi-task neural decoding from distinct cell-types and brain regions"
+  authors:
+    - "M. Azabou"
+    - "K. X. Pan"
+    - "V. Arora"
+    - "I. J. Knight"
+    - "E. L. Dyer"
+    - "B. Richards"
+  venue: "Accepted at Neural Information Processing Systems (NeurIPS)"
+  year: 2024
+  links:
+    paper: "https://openreview.net/pdf?id=IuU0wcO0mo"
+
+- title: "GraphFM: A Scalable Framework For Multi-Graph Pretraining"
+  authors:
+    - "Divyansha L."
+    - "M. Azabou"
+    - "V. Arora"
+    - "E. L. Dyer"
+  venue: "arXiv Preprint"
+  year: 2024
+  links:
+    paper: "https://arxiv.org/abs/2407.11907"
+
+- title: "A Unified, Scalable Framework for Neural Population Decoding"
+  authors:
+    - "M. Azabou"
+    - "V. Arora"
+    - "V. Ganesh"
+    - "X. Mao"
+    - "S. Nachimuthu"
+    - "M. Mendelson"
+    - "B. Richards"
+    - "M. Perich"
+    - "G. Lajoie"
+    - "E. L. Dyer"
+  venue: "Presented at Neural Information Processing Systems (NeurIPS)"
+  year: 2023
+  links:
+    paper: "https://arxiv.org/abs/2310.16046"
+    project: "https://poyo-brain.github.io/"
+    poster: "https://nips.cc/media/PosterPDFs/NeurIPS%202023/70241.png?t=1702162469.6729155"
+    openReview: "https://openreview.net/forum?id=sw2Y0sirtM" 
