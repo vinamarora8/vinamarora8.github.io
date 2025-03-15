@@ -4,7 +4,7 @@ import { FaFilePdf, FaImage, FaExternalLinkAlt } from 'react-icons/fa';
 interface Publication {
   id: number;
   title: string;
-  authors: string;
+  authors: string[];
   venue: string;
   year: number;
   links: {
@@ -19,7 +19,7 @@ const publicationsData: Publication[] = [
   {
     id: 1,
     title: 'Multi-session, multi-task neural decoding from distinct cell-types and brain regions',
-    authors: 'M. Azabou, K. X. Pan, V. Arora, I. J. Knight, E. L. Dyer, B. Richards',
+    authors: ['M. Azabou', 'K. X. Pan', 'V. Arora', 'I. J. Knight', 'E. L. Dyer', 'B. Richards'],
     venue: 'Accepted at Neural Information Processing Systems (NeurIPS)',
     year: 2024,
     links: {
@@ -29,7 +29,7 @@ const publicationsData: Publication[] = [
   {
     id: 2,
     title: 'A Unified, Scalable Framework for Neural Population Decoding',
-    authors: 'M. Azabou, V. Arora, V. Ganesh, X. Mao, S. Nachimuthu, M. Mendelson, B. Richards, M. Perich, G. Lajoie, E. L. Dyer',
+    authors: ['M. Azabou', 'V. Arora', 'V. Ganesh', 'X. Mao', 'S. Nachimuthu', 'M. Mendelson', 'B. Richards', 'M. Perich', 'G. Lajoie', 'E. L. Dyer'],
     venue: 'Presented at Neural Information Processing Systems (NeurIPS)',
     year: 2023,
     links: {
@@ -42,7 +42,7 @@ const publicationsData: Publication[] = [
   {
     id: 3,
     title: 'GraphFM: A Scalable Framework For Multi-Graph Pretraining',
-    authors: 'Divyansha L., M. Azabou, V. Arora, E. L. Dyer',
+    authors: ['Divyansha L.', 'M. Azabou', 'V. Arora', 'E. L. Dyer'],
     venue: 'arXiv Preprint',
     year: 2024,
     links: {
@@ -61,8 +61,17 @@ const Publications: React.FC = () => {
           <div key={publication.id} className="publications__item">
             <div className="publications__content">
               <h3 className="publications__title">{publication.title}</h3>
-              <div className="publications__authors">{publication.authors}</div>
-                <div className="publications__details">
+              <div className="publications__authors">
+                {publication.authors.map((author, index) => (
+                  <React.Fragment key={index}>
+                    <span className={author === "V. Arora" ? "myself" : ""}>
+                      {author}
+                    </span>
+                    {index < publication.authors.length - 1 && ', '}
+                  </React.Fragment>
+                ))}
+              </div>
+              <div className="publications__details">
                     <div className="publications__details__venue">
                         {publication.venue}, {publication.year}
                     </div>

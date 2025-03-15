@@ -30,8 +30,11 @@
     }
 
     &__authors {
-        color: $secondary-color;
         margin-bottom: 0.5rem;
+        
+        .myself {
+            font-weight: 400;
+        }
     }
 
     &__details {
