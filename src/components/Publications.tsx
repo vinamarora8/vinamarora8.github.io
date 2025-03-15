@@ -42,7 +42,7 @@ const publicationsData: Publication[] = [
   {
     id: 3,
     title: 'GraphFM: A Scalable Framework For Multi-Graph Pretraining',
-    authors: 'Devanshu L., M. Azabou, V. Arora, E. L. Dyer',
+    authors: 'Divyansha L., M. Azabou, V. Arora, E. L. Dyer',
     venue: 'arXiv Preprint',
     year: 2024,
     links: {
