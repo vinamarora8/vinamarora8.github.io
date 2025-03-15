@@ -3,9 +3,16 @@
 .header {
   display: flex;
   flex-direction: row;
-  align-items: left;
+  align-items: center;
+  justify-content: space-between;
 
-  h1 {
-    font-size: 50px;
+  &__title {
+    width: 32%;
+    text-align: center;
+  }
+
+  &__nav {
+    width: 60%;
+    text-align: right;
   }
 }
