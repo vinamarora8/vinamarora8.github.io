@@ -54,7 +54,7 @@ const myName: string = "V. Arora";
 const Publications: React.FC = () => {
   return (
     <section className="section publications">
-      <AnimateIn delay={0.1} direction="up">
+      <AnimateIn delay={0.1} direction="right">
         <h2 className="section-title">My Publications</h2>
       </AnimateIn>
       
