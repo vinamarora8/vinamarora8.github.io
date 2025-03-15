@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaFilePdf, FaImage, FaExternalLinkAlt } from 'react-icons/fa';
 import AnimateIn from './AnimateIn';
-import AnimatePublications from './AnimatePublications';
 import publicationsData from '../data/publications.yaml';
 
 interface Publication {
@@ -22,11 +21,11 @@ const myName: string = 'V. Arora';
 const Publications: React.FC = () => {
     return (
         <section className="section publications">
-            <AnimateIn delay={0.1} direction="right">
+            <AnimateIn baseDelay={0.1} direction="right">
                 <h2 className="section-title">My Publications</h2>
             </AnimateIn>
 
-            <AnimatePublications baseDelay={0.3} staggerDelay={0.2}>
+            <AnimateIn baseDelay={0.3} staggerDelay={0.2} direction="right">
                 {(publicationsData as Publication[]).map((publication, index) => (
                     <div key={index} className="publications__item">
                         <div className="publications__content">
@@ -91,7 +90,7 @@ const Publications: React.FC = () => {
                         </div>
                     </div>
                 ))}
-            </AnimatePublications>
+            </AnimateIn>
         </section>
     );
 };

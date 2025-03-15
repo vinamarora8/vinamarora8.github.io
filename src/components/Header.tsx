@@ -5,7 +5,7 @@ import AnimateIn from './AnimateIn';
 const Header: React.FC = () => {
     return (
         <div className="header">
-            <AnimateIn className="header__title" direction="down">
+            <AnimateIn className="header__title" direction="down" baseDelay={0}>
                 <h1>
                     <Textfit
                         mode="single"
