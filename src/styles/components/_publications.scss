@@ -56,10 +56,12 @@
             a {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
             text-decoration: none;
 
-                svg {
-                    margin-right: 0.25rem;
+                p {
+                    margin-left: 5px;
+                    margin-top: 3px;  // To align icon with text
                 }
 
             }

@@ -17,7 +17,7 @@ const Profile: React.FC = () => {
             </div>
 
             <div className="profile__left__location">
-            <FaMapMarkerAlt /> Atlanta, Georgia, USA
+            <FaMapMarkerAlt /> <p>Atlanta, Georgia, USA</p>
             </div>
 
         </div>

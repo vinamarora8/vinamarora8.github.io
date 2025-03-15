@@ -81,25 +81,25 @@ const Publications: React.FC = () => {
                     <div className="publications__details__links">
                         {publication.links.paper && (
                         <a href={publication.links.paper} target="_blank" rel="noopener noreferrer">
-                            <FaFilePdf /> Paper
+                            <FaFilePdf /> <p>Paper</p>
                         </a>
                         )}
                         
                         {publication.links.project && (
                         <a href={publication.links.project} target="_blank" rel="noopener noreferrer">
-                            <FaExternalLinkAlt /> Project Page
+                            <FaExternalLinkAlt /> <p>Project Page</p>
                         </a>
                         )}
                         
                         {publication.links.poster && (
                         <a href={publication.links.poster} target="_blank" rel="noopener noreferrer">
-                            <FaImage /> Poster
+                            <FaImage /> <p>Poster</p>
                         </a>
                         )}
                         
                         {publication.links.openReview && (
                         <a href={publication.links.openReview} target="_blank" rel="noopener noreferrer">
-                            <FaExternalLinkAlt /> OpenReview
+                            <FaExternalLinkAlt /> <p>OpenReview</p>
                         </a>
                         )}
                     </div>
