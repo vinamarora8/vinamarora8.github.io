@@ -3,18 +3,14 @@
   position: relative;
   width: 100%;
   height: 100%;
+  border-radius: inherit;
   
+  // Both images will be styled by inline styles
+  // This is just for any additional styling needed
   .progressive-image {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
-    &.loading {
-      transform: scale(1.05); // Slightly larger to avoid white edges when blurred
-    }
-    
-    &.loaded {
-      transform: scale(1);
-    }
   }
 } 

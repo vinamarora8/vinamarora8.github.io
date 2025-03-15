@@ -13,28 +13,49 @@ const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
   alt,
   className = '',
 }) => {
-  const [src, setSrc] = useState(lowResSrc);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isHighResLoaded, setIsHighResLoaded] = useState(false);
 
   useEffect(() => {
     // Preload high resolution image
     const img = new Image();
     img.src = highResSrc;
     img.onload = () => {
-      setSrc(highResSrc);
-      setIsLoaded(true);
+      setIsHighResLoaded(true);
     };
   }, [highResSrc]);
 
   return (
     <div className={`progressive-image-container ${className}`}>
+      {/* Low-res image (always present, hidden when high-res is loaded) */}
       <img
-        src={src}
+        src={lowResSrc}
         alt={alt}
-        className={`progressive-image ${isLoaded ? 'loaded' : 'loading'}`}
+        className="progressive-image low-res"
         style={{
-          filter: isLoaded ? 'none' : 'blur(10px)',
-          transition: 'filter 0.3s ease-out'
+          opacity: isHighResLoaded ? 0 : 1,
+          filter: 'blur(10px)',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          transition: 'opacity 0.3s ease-out'
+        }}
+      />
+      
+      {/* High-res image (fades in when loaded) */}
+      <img
+        src={highResSrc}
+        alt={alt}
+        className="progressive-image high-res"
+        style={{
+          opacity: isHighResLoaded ? 1 : 0,
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          transition: 'opacity 0.3s ease-out'
         }}
       />
     </div>
