@@ -52,14 +52,14 @@ const Profile: React.FC = () => {
                     </p>
                     <p>
                         My areas of interest are Self-supervised Learning and Learning from
-                        large-scale data. I like working with challenging datasets and am
-                        actively working on developing deep learning methods for computational
-                        neuroscience, graphs, and timeseries.
+                        large-scale data. I like working with challenging datasets and am actively
+                        working on developing deep learning methods for computational neuroscience,
+                        graphs, and timeseries.
                     </p>
                     <p>
-                        I did my undergrad in ECE from the Indian Institute of Technology -
-                        Roorkee (IIT-R). Before diving into machine learning research, I used to
-                        work as a chip-design engineer at Texas Instruments.
+                        I did my undergrad in ECE from the Indian Institute of Technology - Roorkee
+                        (IIT-R). Before diving into machine learning research, I used to work as a
+                        chip-design engineer at Texas Instruments.
                     </p>
                 </AnimateIn>
 

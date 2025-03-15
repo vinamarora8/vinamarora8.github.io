@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion';
 interface AnimateIn {
     children: ReactNode | ReactNode[];
     direction: 'up' | 'down' | 'left' | 'right';
-    className?: string,
+    className?: string;
     baseDelay?: number;
     staggerDelay?: number;
     duration?: number;
@@ -15,14 +15,13 @@ interface AnimateIn {
 const AnimateIn: React.FC<AnimateIn> = ({
     children,
     direction,
-    className = "",
+    className = '',
     baseDelay = 0.2,
     staggerDelay = 0.2,
     duration = 0.3,
     threshold = 0.1, // Default to 10% visibility
     once = true, // Default to trigger only once
 }) => {
-
     const getDirectionOffset = () => {
         switch (direction) {
             case 'up':
@@ -59,25 +58,25 @@ const AnimateIn: React.FC<AnimateIn> = ({
             y: 0,
             transition: {
                 duration: duration,
-                ease: "easeOut",
+                ease: 'easeOut',
             },
         },
     };
 
     // Animate on scroll
     const ref = useRef(null);
-    const isInView = useInView(ref, { 
-        amount: threshold, 
-        once: once 
+    const isInView = useInView(ref, {
+        amount: threshold,
+        once: once,
     });
-    
+
     return (
         <motion.div
             ref={ref}
             className={className}
             variants={containerVariants}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={isInView ? 'visible' : 'hidden'}
         >
             {React.Children.map(children, (child, index) => (
                 <motion.div key={index} variants={itemVariants}>
