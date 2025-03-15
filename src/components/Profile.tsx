@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaEnvelope, FaGraduationCap } from 'react-icons/fa';
 
-const Intro: React.FC = () => {
+const Profile: React.FC = () => {
   return (
       <div className="profile">
         <div className="profile__left">
@@ -87,4 +87,4 @@ const Intro: React.FC = () => {
   )
 }
 
-export default Intro;
+export default Profile;

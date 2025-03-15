@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import Intro from './components/Intro';
+import Profile from './components/Profile';
 import Publications from './components/Publications';
 import Footer from './components/Footer';
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <Intro />
+      <Profile />
       <Publications />
       <Footer />
     </div>
