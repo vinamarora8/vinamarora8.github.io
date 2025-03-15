@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,css,json}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,css,json,yaml}\""
   },
   "dependencies": {
     "@fontsource/source-serif-pro": "^5.2.5",

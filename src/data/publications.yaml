@@ -1,43 +1,107 @@
-- title: "Multi-session, multi-task neural decoding from distinct cell-types and brain regions"
+- title: 'Multi-session, multi-task neural decoding from distinct cell-types and brain regions'
   authors:
-    - "M. Azabou"
-    - "K. X. Pan"
-    - "V. Arora"
-    - "I. J. Knight"
-    - "E. L. Dyer"
-    - "B. Richards"
-  venue: "Accepted at International Conference on Learning Representations (ICLR)"
+    - 'M. Azabou'
+    - 'K. X. Pan'
+    - 'V. Arora'
+    - 'I. J. Knight'
+    - 'E. L. Dyer'
+    - 'B. Richards'
+  venue: 'Accepted at International Conference on Learning Representations (ICLR)'
   year: 2024
   links:
-    paper: "https://openreview.net/pdf?id=IuU0wcO0mo"
+    paper: 'https://openreview.net/pdf?id=IuU0wcO0mo'
+  abstract: |
+    Recent work shows scale is crucial for brain decoding, with more data improving
+    accuracy. However, large-scale decoding across datasets is challenging due to
+    neural circuit heterogeneity. Each brain region has unique cellular sub-types,
+    and responses to stimuli vary across regions and sub-types. It's unknown if
+    pre-training and transferring decoding models between tasks, sub-types, and
+    regions is possible. To investigate, we developed a multi-task transformer
+    architecture trained on the Allen Institute's Brain Observatory dataset. This
+    dataset contains responses from over 100,000 neurons in 6 mouse brain areas,
+    recorded via two-photon calcium imaging during visual stimuli exposure. Our
+    results show transfer is possible - combining data from different sources
+    benefits downstream decoding tasks. We can transfer between regions and
+    sub-types, showing common information exists in diverse circuits that can be
+    extracted by a well-designed model. Interestingly, the model's latent
+    representations distinguished between brain regions and cellular sub-types,
+    despite no explicit information about these distinctions. Our work
+    demonstrates training large-scale neural decoding models on diverse data is
+    feasible, providing a way to study differences and similarities in
+    heterogeneous neural circuits.
 
-- title: "GraphFM: A Scalable Framework For Multi-Graph Pretraining"
+- title: 'GraphFM: A Scalable Framework For Multi-Graph Pretraining'
   authors:
-    - "Divyansha L."
-    - "M. Azabou"
-    - "V. Arora"
-    - "E. L. Dyer"
-  venue: "arXiv Preprint"
+    - 'Divyansha L.'
+    - 'M. Azabou'
+    - 'V. Arora'
+    - 'E. L. Dyer'
+  venue: 'arXiv Preprint'
   year: 2024
   links:
-    paper: "https://arxiv.org/abs/2407.11907"
+    paper: 'https://arxiv.org/abs/2407.11907'
+  abstract: |
+    Graph neural networks are typically trained on individual datasets, often
+    requiring highly specialized models and extensive hyperparameter tuning. This
+    dataset-specific approach arises because each graph dataset often has unique
+    node features and diverse connectivity structures, making it difficult to
+    build a generalist model. To address these challenges, we introduce a
+    scalable multi-graph multi-task pretraining approach specifically tailored
+    for node classification tasks across diverse graph datasets from different
+    domains. Our method, Graph Foundation Model (GraphFM), leverages a
+    Perceiver-based encoder that employs learned latent tokens to compress
+    domain-specific features into a common latent space. This approach enhances
+    the model's ability to generalize across different graphs and allows for
+    scaling across diverse data. We demonstrate the efficacy of our approach by
+    training a model on 152 different graph datasets comprising over 7.4 million
+    nodes and 189 million edges, establishing the first set of scaling laws for
+    multi-graph pretraining on datasets spanning many domains (e.g., molecules,
+    citation and product graphs). Our results show that pretraining on a diverse
+    array of real and synthetic graphs improves the model's adaptability and
+    stability, while performing competitively with state-of-the-art specialist
+    models. This work illustrates that multi-graph pretraining can significantly
+    reduce the burden imposed by the current graph training paradigm, unlocking
+    new capabilities for the field of graph neural networks by creating a single
+    generalist model that performs competitively across a wide range of datasets
+    and tasks.
 
-- title: "A Unified, Scalable Framework for Neural Population Decoding"
+- title: 'A Unified, Scalable Framework for Neural Population Decoding'
   authors:
-    - "M. Azabou"
-    - "V. Arora"
-    - "V. Ganesh"
-    - "X. Mao"
-    - "S. Nachimuthu"
-    - "M. Mendelson"
-    - "B. Richards"
-    - "M. Perich"
-    - "G. Lajoie"
-    - "E. L. Dyer"
-  venue: "Presented at Neural Information Processing Systems (NeurIPS)"
+    - 'M. Azabou'
+    - 'V. Arora'
+    - 'V. Ganesh'
+    - 'X. Mao'
+    - 'S. Nachimuthu'
+    - 'M. Mendelson'
+    - 'B. Richards'
+    - 'M. Perich'
+    - 'G. Lajoie'
+    - 'E. L. Dyer'
+  venue: 'Presented at Neural Information Processing Systems (NeurIPS)'
   year: 2023
   links:
-    paper: "https://arxiv.org/abs/2310.16046"
-    project: "https://poyo-brain.github.io/"
-    poster: "https://nips.cc/media/PosterPDFs/NeurIPS%202023/70241.png?t=1702162469.6729155"
-    openReview: "https://openreview.net/forum?id=sw2Y0sirtM" 
+    paper: 'https://arxiv.org/abs/2310.16046'
+    project: 'https://poyo-brain.github.io/'
+    poster: 'https://nips.cc/media/PosterPDFs/NeurIPS%202023/70241.png?t=1702162469.6729155'
+    openReview: 'https://openreview.net/forum?id=sw2Y0sirtM'
+  abstract: |
+    Our ability to use deep learning approaches to decipher neural activity would
+    likely benefit from greater scale, in terms of both the model size and the
+    datasets. However, the integration of many neural recordings into one unified
+    model is challenging, as each recording contains the activity of different
+    neurons from different individual animals. In this paper, we introduce a
+    training framework and architecture designed to model the population dynamics
+    of neural activity across diverse, large-scale neural recordings. Our method
+    first tokenizes individual spikes within the dataset to build an efficient
+    representation of neural events that captures the fine temporal structure of
+    neural activity. We then employ cross-attention and a PerceiverIO backbone to
+    further construct a latent tokenization of neural population activities.
+    Utilizing this architecture and training framework, we construct a large-
+    scale multi-session model trained on large datasets from seven nonhuman
+    primates, spanning over 158 different sessions of recording from over 27,373
+    neural units and over 100 hours of recordings. In a number of different
+    tasks, we demonstrate that our pretrained model can be rapidly adapted to
+    new, unseen sessions with unspecified neuron correspondence, enabling few-
+    shot performance with minimal labels. This work presents a powerful new
+    approach for building deep learning tools to analyze neural data and stakes
+    out a clear path to training at scale for neural decoding models.

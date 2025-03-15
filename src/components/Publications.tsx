@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaFilePdf, FaImage, FaExternalLinkAlt } from 'react-icons/fa';
 import AnimateIn from './AnimateIn';
 import publicationsData from '../data/publications.yaml';
@@ -14,11 +14,23 @@ interface Publication {
     poster?: string;
     openReview?: string;
   };
+  abstract?: string;
+  isAbstractVisible: boolean;
+  setAbstractVisible: (visible: boolean) => void;
 }
 
 const myName: string = 'V. Arora';
 
 const Publications: React.FC = () => {
+  const publicationList: Publication[] = publicationsData.map((publication: Publication) => {
+    const [isVisible, setVisible] = useState<boolean>(false);
+    return {
+      ...publication,
+      isAbstractVisible: isVisible,
+      setAbstractVisible: setVisible,
+    };
+  });
+
   return (
     <section className="section publications">
       <AnimateIn baseDelay={0.1} direction="right">
@@ -31,8 +43,12 @@ const Publications: React.FC = () => {
         staggerDelay={0.2}
         direction="right"
       >
-        {(publicationsData as Publication[]).map((publication, index) => (
-          <div key={index} className="publications__item">
+        {publicationList.map((publication, index) => (
+          <div
+            key={index}
+            className="publications__item"
+            onClick={() => publication.setAbstractVisible(!publication.isAbstractVisible)}
+          >
             <div className="publications__content">
               <h3 className="publications__title">{publication.title}</h3>
               <div className="publications__authors">
@@ -47,6 +63,16 @@ const Publications: React.FC = () => {
                 <div className="publications__details__venue">
                   {publication.venue}, {publication.year}
                 </div>
+
+                {publication.isAbstractVisible && publication.abstract && (
+                  <AnimateIn
+                    baseDelay={0.0}
+                    direction="down"
+                    className="publications__details__abstract"
+                  >
+                    {publication.abstract}
+                  </AnimateIn>
+                )}
 
                 <div className="publications__details__links">
                   {publication.links.paper && (
