@@ -2,7 +2,24 @@
 $primary-color: #333;
 $secondary-color: #666;
 $accent-color: #4a90e2;
+$gradient-end: #7EC3FF;
+$gradient-start: #FFAEC2;
 $background-color: #fff;
-$light-gray: #f5f5f5;
-$border-color: #e0e0e0; 
 
+// Left border gradient mixin using pseudo-element (works with border-radius)
+@mixin left-border-gradient-pseudo($width: 1px, $border-radius: 0) {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -$width;
+    width: $width;
+    height: 100%;
+    background: linear-gradient(to bottom, $gradient-start, $gradient-end);
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    z-index: 1;
+  }
+}

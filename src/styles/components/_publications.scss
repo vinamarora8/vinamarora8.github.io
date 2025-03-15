@@ -14,7 +14,8 @@
         padding: 10px 16px;
 
         &:hover {
-            border-left-color: $accent-color;
+            border-left-color: transparent;
+            @include left-border-gradient-pseudo(6px, 3px);
         }
     }
 
