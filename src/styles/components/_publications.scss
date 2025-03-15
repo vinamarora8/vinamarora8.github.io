@@ -10,7 +10,6 @@
   $abstract-button-size: 9px;
 
   &__item {
-
     display: flex;
     flex-direction: row;
     gap: $abstract-button-size;
@@ -70,11 +69,10 @@
 
     &:hover {
       svg {
-           color: $gradient-start;
+        color: $gradient-start;
       }
     }
   }
-
 
   &__content {
     font-size: 15px;

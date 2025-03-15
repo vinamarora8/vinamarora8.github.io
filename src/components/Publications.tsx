@@ -52,7 +52,7 @@ const Publications: React.FC = () => {
               <div className="publications__abstract-button__border"></div>
               <div className="publications__abstract-button__container">
                 <FaAngleDown
-                  style={{transform: publication.isAbstractVisible ? "rotate(180deg)" : ""}}
+                  style={{ transform: publication.isAbstractVisible ? 'rotate(180deg)' : '' }}
                 />
               </div>
             </div>
@@ -72,13 +72,15 @@ const Publications: React.FC = () => {
                   {publication.venue}, {publication.year}
                 </div>
 
-                <div className={`publications__details__abstract ${
-                  publication.isAbstractVisible ? `publications__details__abstract--visible`: ''
-                }`}>
-                  <div style={{height: 15}}></div>
-                  <span style={{fontWeight: 400}}>Abstract: </span>
+                <div
+                  className={`publications__details__abstract ${
+                    publication.isAbstractVisible ? `publications__details__abstract--visible` : ''
+                  }`}
+                >
+                  <div style={{ height: 15 }}></div>
+                  <span style={{ fontWeight: 400 }}>Abstract: </span>
                   {publication.abstract}
-                  <div style={{height: 15}}></div>
+                  <div style={{ height: 15 }}></div>
                 </div>
 
                 <div className="publications__details__links">
