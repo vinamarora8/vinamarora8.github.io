@@ -41,8 +41,8 @@ const Profile: React.FC = () => {
                     staggerDelay={0.05}
                 >
                     <p>
-                        I am a second year Ph.D. student in Machine Learning at the Georgia Institute of
-                        Technology, where I conduct my research at the{' '}
+                        I am a second year Ph.D. student in Machine Learning at the Georgia
+                        Institute of Technology, where I conduct my research at the{' '}
                         <a
                             href="https://dyerlab.gatech.edu/"
                             target="_blank"
@@ -67,9 +67,10 @@ const Profile: React.FC = () => {
                         graphs, and timeseries.
                     </p>
                     <p>
-                        I did my undergrad in ECE from the Indian Institute of Technology - Roorkee
-                        (IIT-R). Before diving into machine learning research, I used to work as a
-                        chip-design engineer at Texas Instruments.
+                        I did my undergrad in Electronics and Communication Engineering from the
+                        Indian Institute of Technology - Roorkee. Before diving into machine
+                        learning research, I used to work as a chip-design engineer at Texas
+                        Instruments.
                     </p>
                 </AnimateIn>
 
