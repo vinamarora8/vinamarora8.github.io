@@ -41,7 +41,7 @@ const Profile: React.FC = () => {
                     staggerDelay={0.05}
                 >
                     <p>
-                        I am a Ph.D. student in Machine Learning at the Georgia Institute of
+                        I am a second year Ph.D. student in Machine Learning at the Georgia Institute of
                         Technology, where I conduct my research at the{' '}
                         <a
                             href="https://dyerlab.gatech.edu/"
