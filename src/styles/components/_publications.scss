@@ -8,14 +8,35 @@
     }
 
     &__item {
+        $border-width: 6px;
+        $border-radius: 3px;
+        $gradient-end: #7EC3FF;
+        $gradient-start: #FFAEC2;
+        
         display: flex;
-        border-left: 6px solid #e0e0e0;
-        border-radius: 3px;
+        border-left: $border-width solid #e0e0e0;
+        border-radius: $border-radius;
         padding: 10px 16px;
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -$border-width;
+            width: $border-width;
+            height: 100%;
+            background: linear-gradient(to bottom, $gradient-start, $gradient-end);
+            border-radius: $border-radius 0 0 $border-radius;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.1s ease-in;
+        }
 
         &:hover {
-            border-left-color: transparent;
-            @include left-border-gradient-pseudo(6px, 3px);
+            &::before {
+                opacity: 1;
+            }
         }
     }
 
