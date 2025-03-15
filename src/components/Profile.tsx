@@ -11,12 +11,11 @@ const Profile: React.FC = () => {
         <div className="profile__left">
             <AnimateIn delay={0.1} direction="left">
                 <TiltEffect maxTiltDegrees={5} shadowIntensity={0.05}>
-                    <div className="profile__left__image-container">
+                    <div className="profile__left__image">
                         <ProgressiveImage 
                         lowResSrc="/images/profile-image-low.jpg"
                         highResSrc="/images/profile-image.jpg" 
                         alt="Vinam Arora" 
-                        className="profile__left__image"
                         />
                     </div>
                 </TiltEffect>
