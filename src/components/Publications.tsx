@@ -23,7 +23,7 @@ const publicationsData: Publication[] = [
     venue: 'Accepted at Neural Information Processing Systems (NeurIPS)',
     year: 2024,
     links: {
-      paper: '#'
+      paper: 'https://openreview.net/pdf?id=IuU0wcO0mo'
     }
   },
   {
@@ -33,10 +33,10 @@ const publicationsData: Publication[] = [
     venue: 'Presented at Neural Information Processing Systems (NeurIPS)',
     year: 2023,
     links: {
-      paper: '#',
-      project: '#',
-      poster: '#',
-      openReview: '#'
+      paper: 'https://arxiv.org/abs/2310.16046',
+      project: 'https://poyo-brain.github.io/',
+      poster: 'https://nips.cc/media/PosterPDFs/NeurIPS%202023/70241.png?t=1702162469.6729155',
+      openReview: 'https://openreview.net/forum?id=sw2Y0sirtM'
     }
   },
   {
@@ -46,10 +46,12 @@ const publicationsData: Publication[] = [
     venue: 'arXiv Preprint',
     year: 2024,
     links: {
-      paper: '#'
+      paper: 'https://arxiv.org/abs/2407.11907'
     }
   }
 ];
+
+const myName: string = "V. Arora";
 
 const Publications: React.FC = () => {
   return (
@@ -64,7 +66,7 @@ const Publications: React.FC = () => {
               <div className="publications__authors">
                 {publication.authors.map((author, index) => (
                   <React.Fragment key={index}>
-                    <span className={author === "V. Arora" ? "myself" : ""}>
+                    <span className={author === myName ? "myself" : ""}>
                       {author}
                     </span>
                     {index < publication.authors.length - 1 && ', '}
