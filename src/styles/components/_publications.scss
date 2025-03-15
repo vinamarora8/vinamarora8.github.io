@@ -51,8 +51,9 @@
         &__links {
             display: flex;
             flex-direction: row;
-            gap: 1rem;
-            margin-top: 0.5rem;
+            flex-wrap: wrap;
+            column-gap: 15px;
+            margin-top: 5px;
             
             a {
             display: flex;
