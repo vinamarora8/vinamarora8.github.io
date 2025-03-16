@@ -29,7 +29,7 @@ const Publications: React.FC = () => {
   return (
     <section className="publications mt-16">
       <AnimateIn baseDelay={0.1} direction="right">
-        <h2 className="text-3xl">My Publications</h2>
+        <h2>My Publications</h2>
       </AnimateIn>
 
       <AnimateIn

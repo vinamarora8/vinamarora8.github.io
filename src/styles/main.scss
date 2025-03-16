@@ -6,37 +6,3 @@
 /* Import Source Serif Pro font */
 @import '@fontsource/source-serif-pro/300.css';
 @import '@fontsource/source-serif-pro/400.css';
-
-// Base styles
-body {
-  font-family: 'Source Serif Pro', serif;
-  font-weight: 300;
-  //font-size: 18px;
-  color: $primary-color;
-  line-height: 1.6;
-  background-color: $background-color;
-  padding: 0 20px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-// Layout
-.container {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 0;
-}

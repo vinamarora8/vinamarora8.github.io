@@ -23,7 +23,7 @@ const ProfileLeft: React.FC = () => {
         />
       </TiltEffect>
 
-      <div className="flex flex-col items-center text-center text-lg font-normal">
+      <div className="flex flex-col items-center text-center text-lg font-medium">
         <p>Machine Learning Ph.D. Student</p>
         <p>@ Georgia Tech</p>
         <div className="text-secondary mt-2.5 flex flex-row items-center gap-1.5">
