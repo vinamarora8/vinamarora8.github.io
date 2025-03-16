@@ -15,10 +15,10 @@ const Header: React.FC = () => {
           Vinam Arora
         </Textfit>
       </AnimateIn>
-      <div className="header__nav">
+      <AnimateIn className="header__nav" direction="down" baseDelay={0.1}>
         <Link to="/career">Career</Link>
         <Link to="/">Home</Link>
-      </div>
+      </AnimateIn>
     </div>
   );
 };
