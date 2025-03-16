@@ -1,16 +1,17 @@
 import React from 'react';
 import careerData from '../data/career.yaml';
+import AnimateIn from './AnimateIn';
 
 const Career: React.FC = () => {
   const careerList: CareerItemProps[] = careerData;
 
   return (
     <div className="career-container">
-      <div className="career-list">
-        {careerList.map((item, index) => (
-          <CareerItem key={index} {...item} />
-        ))}
-      </div>
+        <AnimateIn direction="down" className="career-list">
+          {careerList.map((item, index) => (
+            <CareerItem key={index} {...item} />
+          ))}
+        </AnimateIn>
     </div>
   );
 };
