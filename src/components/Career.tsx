@@ -38,12 +38,7 @@ const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, d
         <h4 className="career-item__venue">{venue}</h4>
         {description && (
           <div className="career-item__description">
-            {description
-              .split(/\n\s*\n/)
-              .filter((para) => para.trim() !== '')
-              .map((paragraph, i) => (
-                <p key={i}>{paragraph.replace(/\n/g, ' ')}</p>
-              ))}
+            <div dangerouslySetInnerHTML={{ __html: description }} />
           </div>
         )}
       </div>
