@@ -1,11 +1,9 @@
 import React from 'react';
-import { FaLocationDot } from 'react-icons/fa6';
+import { FaLocationDot, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa6';
+import { FaGraduationCap } from 'react-icons/fa';
 import AnimateIn from './AnimateIn';
 import ProgressiveImage from './ProgressiveImage';
 import TiltEffect from './TiltEffect';
-import { AiOutlineMail } from 'react-icons/ai';
-import { CiLinkedin } from 'react-icons/ci';
-import { PiGithubLogo, PiGraduationCapLight } from 'react-icons/pi';
 
 const Profile: React.FC = () => {
   return (
@@ -79,7 +77,7 @@ const Profile: React.FC = () => {
             className="social-links__item"
             aria-label="Google Scholar"
           >
-            <PiGraduationCapLight />
+            <FaGraduationCap />
             <p>Google Scholar</p>
           </a>
           <a
@@ -89,7 +87,7 @@ const Profile: React.FC = () => {
             className="social-links__item"
             aria-label="GitHub"
           >
-            <PiGithubLogo />
+            <FaGithub />
             <p>Github</p>
           </a>
           <a
@@ -99,11 +97,11 @@ const Profile: React.FC = () => {
             className="social-links__item"
             aria-label="LinkedIn"
           >
-            <CiLinkedin />
+            <FaLinkedin />
             <p>LinkedIn</p>
           </a>
           <a href="mailto:vinam@gatech.edu" className="social-links__item" aria-label="Email">
-            <AiOutlineMail />
+            <FaEnvelope />
             <p>Email</p>
           </a>
         </AnimateIn>
