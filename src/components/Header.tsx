@@ -1,6 +1,7 @@
 import React from 'react';
 import { Textfit } from 'react-textfit';
 import AnimateIn from './AnimateIn';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   return (
@@ -17,8 +18,8 @@ const Header: React.FC = () => {
         </h1>
       </AnimateIn>
       <div className="header__nav">
-        <a href="/career">Career</a>
-        <a href="/">Home</a>
+        <Link to="/career">Career</Link>
+        <Link to="/">Home</Link>
       </div>
     </div>
   );
