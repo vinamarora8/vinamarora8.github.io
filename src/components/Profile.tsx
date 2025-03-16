@@ -39,7 +39,12 @@ const Profile: React.FC = () => {
           <p>
             I am a second year Ph.D. student in Machine Learning at the Georgia Institute of
             Technology, where I conduct my research at the{' '}
-            <a href="https://dyerlab.gatech.edu/" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://dyerlab.gatech.edu/"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="underline"
+            >
               NerDS Lab
             </a>{' '}
             and am advised by{' '}
@@ -47,6 +52,7 @@ const Profile: React.FC = () => {
               href="https://dyerlab.gatech.edu/people/pi-profile/"
               target="_blank"
               rel="noopener noreferrer"
+              className="underline"
             >
               Prof. Eva Dyer
             </a>

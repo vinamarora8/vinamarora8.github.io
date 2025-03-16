@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Custom styles that should not be purged by Tailwind */
+@layer base {
+  body {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 300;
+  }
+} 

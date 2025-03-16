@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   return (
-    <div className="header">
-      <AnimateIn className="header__title" direction="down" baseDelay={0}>
+    <div className="flex justify justify-between items-center">
+      <AnimateIn className="font-normal w-[32%]" direction="down" baseDelay={0}>
         <Textfit
           mode="single"
           max={50} // Maximum font size
@@ -15,9 +15,9 @@ const Header: React.FC = () => {
           Vinam Arora
         </Textfit>
       </AnimateIn>
-      <AnimateIn className="header__nav" direction="down" baseDelay={0.1}>
-        <Link to="/">Home</Link>
-        <Link to="/career">Career</Link>
+      <AnimateIn className="flex font-normal gap-10" direction="down" baseDelay={0.1}>
+        <Link to="/" className="no-underline"><p>Home</p></Link>
+        <Link to="/career" className="no-underline">Career</Link>
       </AnimateIn>
     </div>
   );

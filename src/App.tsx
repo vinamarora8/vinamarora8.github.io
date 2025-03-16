@@ -5,6 +5,7 @@ import Publications from './components/Publications';
 import Footer from './components/Footer';
 import FontLoader from './components/FontLoader';
 import Career from './components/Career';
+import TailwindTest from './components/TailwindTest';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
                 </>
               }
             />
-            <Route path="/career" element={<Career />} />
+            <Route path="/career" element={<><Career /><TailwindTest /></>} />
           </Routes>
           <Footer />
         </FontLoader>
