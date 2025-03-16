@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { FaLocationDot, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa6';
 import { FaGraduationCap } from 'react-icons/fa';
 import AnimateIn from './AnimateIn';
@@ -6,12 +6,17 @@ import ProgressiveImage from './ProgressiveImage';
 import TiltEffect from './TiltEffect';
 import Link from './Link';
 
-const Profile: React.FC = () => {
+const ProfileLeft: React.FC = () => {
   return (
-    <div className="profile">
-      <AnimateIn className="profile__left" baseDelay={0.1} direction="left" staggerDelay={0.1}>
+    <>
+      <AnimateIn
+        className="mb-6 flex flex-col items-center gap-8 md:w-[32%]"
+        baseDelay={0.1}
+        direction="left"
+        staggerDelay={0.1}
+      >
         <TiltEffect maxTiltDegrees={5} shadowIntensity={0.05}>
-          <div className="profile__left__image">
+          <div className="shadow-profile-pic max-w-[250px] rounded-4xl md:max-w-[100%]">
             <ProgressiveImage
               lowResSrc="/images/profile-image-low.jpg"
               highResSrc="/images/profile-image.jpg"
@@ -20,15 +25,23 @@ const Profile: React.FC = () => {
           </div>
         </TiltEffect>
 
-        <div className="profile__left__title">
-          Machine Learning Ph.D. Student
-          <br />@ Georgia Tech
-        </div>
-
-        <div className="profile__left__location">
-          <FaLocationDot /> <p>Atlanta, Georgia, USA</p>
+        <div className="flex flex-col items-center text-center font-normal">
+          <p>Machine Learning Ph.D. Student</p>
+          <p>@ Georgia Tech</p>
+          <div className="text-secondary mt-2.5 flex flex-row items-center gap-1.5">
+            <FaLocationDot className="mb-0.5" />
+            <p>Atlanta, Georgia, USA</p>
+          </div>
         </div>
       </AnimateIn>
+    </>
+  );
+};
+
+const Profile: React.FC = () => {
+  return (
+    <div className="flex flex-col items-center justify-between md:flex-row md:items-start">
+      <ProfileLeft />
 
       <div className="profile__right">
         <AnimateIn
@@ -62,7 +75,7 @@ const Profile: React.FC = () => {
         </AnimateIn>
 
         <AnimateIn
-          className="flex flex-row gap-x-16 text-center text-xs"
+          className="mt-8 flex flex-row gap-x-16 text-center text-[10px]"
           baseDelay={0.5}
           staggerDelay={0.1}
           direction="up"
@@ -72,7 +85,7 @@ const Profile: React.FC = () => {
             aria-label="Google Scholar"
             className="flex flex-col items-center gap-1"
           >
-            <FaGraduationCap className="w-10 h-10"/>
+            <FaGraduationCap className="h-10 w-10" />
             <p>Google Scholar</p>
           </Link>
           <Link
@@ -80,7 +93,7 @@ const Profile: React.FC = () => {
             aria-label="GitHub"
             className="flex flex-col items-center gap-1"
           >
-            <FaGithub className="w-10 h-10"/>
+            <FaGithub className="h-10 w-10" />
             <p>Github</p>
           </Link>
           <Link
@@ -88,7 +101,7 @@ const Profile: React.FC = () => {
             aria-label="LinkedIn"
             className="flex flex-col items-center gap-1"
           >
-            <FaLinkedin className="w-10 h-10"/>
+            <FaLinkedin className="h-10 w-10" />
             <p>LinkedIn</p>
           </Link>
           <Link
@@ -96,7 +109,7 @@ const Profile: React.FC = () => {
             aria-label="Email"
             className="flex flex-col items-center gap-1"
           >
-            <FaEnvelope className="w-10 h-10"/>
+            <FaEnvelope className="h-10 w-10" />
             <p>Email</p>
           </Link>
         </AnimateIn>

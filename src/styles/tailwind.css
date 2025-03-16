@@ -12,4 +12,5 @@
   --color-primary: #333;
   --color-secondary: #666;
   --color-accent: #4a90e2;
+  --shadow-profile-pic: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
