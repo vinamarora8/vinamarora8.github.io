@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <div className="mb-4 flex flex-col items-center justify-between md:flex-row">
       <AnimateIn
-        className="w-full text-center text-[50px] font-normal md:w-[288px]"
+        className="w-full text-center text-[50px] font-normal md:w-[250px] md:text-[42px] lg:w-[288px] lg:text-[50px]"
         direction="down"
         baseDelay={0}
       >

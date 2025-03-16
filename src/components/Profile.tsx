@@ -9,13 +9,13 @@ import Link from './Link';
 const ProfileLeft: React.FC = () => {
   return (
     <AnimateIn
-      className="mt-3 flex flex-col items-center gap-8 md:w-[288px]"
+      className="mg:w-[250px] flex flex-col items-center justify-start gap-8 lg:w-[288px]"
       baseDelay={0.1}
       direction="left"
       staggerDelay={0.1}
     >
       <TiltEffect maxTiltDegrees={5} shadowIntensity={0.05}>
-        <div className="shadow-profile-pic max-w-[288px] rounded-4xl md:max-w-none">
+        <div className="shadow-profile-pic w-[250px] rounded-4xl lg:w-[288px]">
           <ProgressiveImage
             lowResSrc="/images/profile-image-low.jpg"
             highResSrc="/images/profile-image.jpg"
@@ -38,14 +38,9 @@ const ProfileLeft: React.FC = () => {
 
 const ProfileRight: React.FC = () => {
   return (
-    <div className="flex flex-col items-center md:w-[60%]">
-      <AnimateIn
-        className="flex flex-col gap-5 text-justify text-lg"
-        baseDelay={0.2}
-        direction="right"
-        staggerDelay={0.05}
-      >
-        <p>
+    <div className="flex w-full flex-col items-center">
+      <AnimateIn baseDelay={0.2} direction="right" staggerDelay={0.05}>
+        <p className="mb-5 text-justify text-lg leading-[25px]">
           I am a second year Ph.D. student in Machine Learning at the Georgia Institute of
           Technology, where I conduct my research at the{' '}
           <Link href="https://dyerlab.gatech.edu/" className="underline">
@@ -57,12 +52,12 @@ const ProfileRight: React.FC = () => {
           </Link>
           .
         </p>
-        <p>
+        <p className="mb-5 text-justify text-lg leading-[25px]">
           My areas of interest are Self-supervised Learning and Learning from large-scale data. I
           like working with challenging datasets and am actively working on developing deep learning
           methods for computational neuroscience, graphs, and timeseries.
         </p>
-        <p>
+        <p className="mb-5 text-justify text-lg leading-[25px]">
           I did my undergrad in Electronics and Communication Engineering from the Indian Institute
           of Technology - Roorkee. Before diving into machine learning research, I used to work as a
           chip-design engineer at Texas Instruments.
@@ -70,7 +65,7 @@ const ProfileRight: React.FC = () => {
       </AnimateIn>
 
       <AnimateIn
-        className="mt-8 flex flex-row gap-x-16 text-center text-[10px]"
+        className="mt-2 flex flex-row gap-8 text-center text-xs md:gap-10 lg:gap-16"
         baseDelay={0.5}
         staggerDelay={0.1}
         direction="up"
@@ -114,7 +109,7 @@ const ProfileRight: React.FC = () => {
 
 const Profile: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:items-start md:gap-14">
+    <div className="flex flex-col items-center justify-between gap-10 md:flex-row md:items-start lg:gap-16">
       <ProfileLeft />
       <ProfileRight />
     </div>
