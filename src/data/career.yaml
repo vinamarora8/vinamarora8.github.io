@@ -1,7 +1,7 @@
-- logo: "/images/career-logos/gt.png"
-  title: "Ph.D. in Machine Learning"
-  venue: "Georgia Institute of Technology, GA, USA"
-  timeline: "2024 - ongoing"
+- logo: '/images/career-logos/gt.png'
+  title: 'Ph.D. in Machine Learning'
+  venue: 'Georgia Institute of Technology, GA, USA'
+  timeline: '2024 - ongoing'
   description: |
     <p>My Ph.D. work focuses on developing deep-learning methods for neural, graph,
     and timeseries data. Currently, I'm working on cell-type classification from
@@ -17,10 +17,10 @@
       >torch_brain</a>).
     </p>
 
-- logo: "/images/career-logos/rivos.png"
-  title: "Internship - Microarchitecture Engineer"
-  venue: "Rivos Inc., CA, USA"
-  timeline: "Summer 2023"
+- logo: '/images/career-logos/rivos.png'
+  title: 'Internship - Microarchitecture Engineer'
+  venue: 'Rivos Inc., CA, USA'
+  timeline: 'Summer 2023'
   description: |
     <p>
     At Rivos, a chip-design startup, I developed a power and network limiter for
@@ -29,15 +29,15 @@
     learning training frameworks.
     </p>
 
-- logo: "/images/career-logos/gt.png"
-  title: "Masters in Electrical & Computer Engineering"
-  venue: "Georgia Institute of Technology, GA, USA"
-  timeline: "2022 - 2025"
+- logo: '/images/career-logos/gt.png'
+  title: 'Masters in Electrical & Computer Engineering'
+  venue: 'Georgia Institute of Technology, GA, USA'
+  timeline: '2022 - 2025'
 
-- logo: "/images/career-logos/ti.png"
-  title: "Digital-Design Engineer"
-  venue: "Texas Instruments, Bangalore, India"
-  timeline: "2019 - 2022"
+- logo: '/images/career-logos/ti.png'
+  title: 'Digital-Design Engineer'
+  venue: 'Texas Instruments, Bangalore, India'
+  timeline: '2019 - 2022'
   description: |
     <p>
     My work at TI revolved around designing Digital Signal-Processing algorithms
@@ -53,7 +53,7 @@
     [2] filed by TI.
     </p>
 
-- logo: "/images/career-logos/iitr.png"
-  title: "Bachelors in Electronics & Communication Engineering"
-  venue: "Indian Institute of Technology - Roorkee"
-  timeline: "2015 - 2019"
+- logo: '/images/career-logos/iitr.png'
+  title: 'Bachelors in Electronics & Communication Engineering'
+  venue: 'Indian Institute of Technology - Roorkee'
+  timeline: '2015 - 2019'

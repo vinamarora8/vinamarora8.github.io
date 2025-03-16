@@ -21,13 +21,11 @@
   $desc-width: 540px;
   $col-gap: 10px;
 
-
   display: flex;
   flex-direction: column;
   font-size: 15px;
 
   &__upper {
-
     &.desktop {
       display: flex;
       flex-direction: row;
@@ -95,8 +93,6 @@
         display: flex;
       }
     }
-
-
   }
 
   &__lower {
@@ -139,12 +135,11 @@
         flex-direction: column;
         gap: 10px;
         margin-bottom: 10px;
-        text-align: justify;;
+        text-align: justify;
         font-size: 15px;
         min-height: 10px;
       }
     }
-
   }
 
   @media (max-width: 768px) {
@@ -165,14 +160,12 @@
         &__venue {
           font-size: 14px;
         }
-        
+
         &__description {
           font-size: 12px;
           line-height: 18px;
         }
-
       }
     }
   }
-
 }

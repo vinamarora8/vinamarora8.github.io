@@ -13,12 +13,15 @@ function App() {
         <FontLoader>
           <Header />
           <Routes>
-            <Route path="/" element={
-              <>
-                <Profile />
-                <Publications />
-              </>
-            } />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Profile />
+                  <Publications />
+                </>
+              }
+            />
             <Route path="/career" element={<Career />} />
           </Routes>
           <Footer />
