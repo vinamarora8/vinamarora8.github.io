@@ -1,7 +1,7 @@
 - logo: "none"
   title: "Ph.D. in Machine Learning"
   venue: "Georgia Institute of Technology, GA, USA"
-  timeline: 2024 - ongoing
+  timeline: "2024 - ongoing"
   description: |
     My Ph.D. work focuses on developing deep-learning methods for neural, graph,
     and timeseries data. Currently, I'm working on cell-type classification from
@@ -10,3 +10,13 @@
 
     I've also dedicated significant time to developing an open-source package
     for deep-learning on neuroscience data (torch_brain).
+
+- logo: "none"
+  title: "Internship - Microarchitecture Engineer"
+  venue: "Rivos Inc., CA, USA"
+  timeline: "Summer 2023"
+  description: |
+    At Rivos, I designed a power- and network-limiter in a GPU-like system. I
+    gained insights into GPU internals. This experience helps me make informed
+    choices when writing efficient, large-scale deep-learning training
+    frameworks.

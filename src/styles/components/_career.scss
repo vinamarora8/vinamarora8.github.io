@@ -1,15 +1,26 @@
 .career-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+}
+
+.career-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .career-item {
   $bar-color: #333;
 
-  width: 600px;
   display: flex;
   flex-direction: row;
   gap: 10px;
+
+  &__timeline {
+    width: 120px;
+    text-align: right;
+  }
 
   &__bar-container {
     display: flex;
@@ -31,6 +42,7 @@
   }
 
   &__text {
+    max-width: 500px;
     margin: 0;
     font-size: 18px;
 
@@ -47,6 +59,7 @@
       font-size: 15px;
       text-align: justify;
       margin-bottom: 15px;
+      line-height: 25px;
     }
   }
 
