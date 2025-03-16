@@ -16,7 +16,10 @@ const Header: React.FC = () => {
           </Textfit>
         </h1>
       </AnimateIn>
-      <div className="header__nav"></div>
+      <div className="header__nav">
+        <a href="/career">Career</a>
+        <a href="/">Home</a>
+      </div>
     </div>
   );
 };
