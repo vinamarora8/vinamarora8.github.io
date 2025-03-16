@@ -17,11 +17,11 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
+  font-size: 15px;
 
   &__timeline {
     width: 100px;
     text-align: right;
-    font-size: 15px;
   }
 
   &__bar-container {
@@ -46,9 +46,7 @@
   &__text {
     width: 540px;
     margin: 0;
-    font-size: 15px;
   }
-
 
   &__title {
       margin: 0;
@@ -72,29 +70,14 @@
 
   @media (max-width: 768px) {
     &__timeline {
-      font-size: 15px;
-      width: 0px;
-      display: none;
-    }
-
-    &__title {
-      font-size: 15px;
-    }
-
-    &__venue {
-      font-size: 15px;
+      width: 50px;
+      font-size: 12px;
     }
 
     &__text {
       width: 100%;
       min-width: unset;
     }
-
-    &__description {
-      font-size: 12px;
-      line-height: 15px;
-    }
-
   }
 
 }
