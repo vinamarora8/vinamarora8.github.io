@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .career-container {
   display: flex;
   flex-direction: row;
@@ -12,10 +14,10 @@
 }
 
 .career-item {
-  $bar-color: #333;
+  $bar-color: $secondary-color;
   $timeline-width: 100px;
   $logo-width: 60px;
-  $mobile-logo-width: 60px;
+  $mobile-logo-width: 40px;
   $desc-width: 540px;
   $col-gap: 10px;
 
@@ -46,21 +48,22 @@
       width: $timeline-width;
       text-align: right;
       font-weight: 400;
+      font-size: 15px;
 
       &.mobile {
         text-align: left;
-        font-weight: 400;
+        font-size: 12px;
       }
     }
 
     &__logo {
-      background-color: $bar-color;
       width: $logo-width;
-      height: $logo-width;
+      height: auto;
+      min-height: $logo-width;
+      object-fit: contain;
 
       &.mobile {
-        min-width: $mobile-logo-width;
-        min-height: $mobile-logo-width;
+        width: $mobile-logo-width;
       }
     }
 
@@ -71,6 +74,7 @@
 
       &.mobile {
         width: unset;
+        font-size: 15px;
       }
     }
 
@@ -116,6 +120,7 @@
       width: 2px;
       height: 100%;
       background-color: $bar-color;
+      border-radius: 100px;
     }
 
     &__text {
@@ -135,6 +140,8 @@
         gap: 10px;
         margin-bottom: 10px;
         text-align: justify;;
+        font-size: 15px;
+        min-height: 10px;
       }
     }
 
@@ -154,6 +161,16 @@
 
       &__text {
         width: calc(100% - $mobile-logo-width - $col-gap);
+
+        &__venue {
+          font-size: 14px;
+        }
+        
+        &__description {
+          font-size: 12px;
+          line-height: 18px;
+        }
+
       }
     }
   }

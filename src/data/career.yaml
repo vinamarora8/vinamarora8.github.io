@@ -1,4 +1,4 @@
-- logo: "none"
+- logo: "/images/career-logos/gt.png"
   title: "Ph.D. in Machine Learning"
   venue: "Georgia Institute of Technology, GA, USA"
   timeline: "2024 - ongoing"
@@ -17,24 +17,24 @@
       >torch_brain</a>).
     </p>
 
-- logo: "none"
+- logo: "/images/career-logos/rivos.png"
   title: "Internship - Microarchitecture Engineer"
   venue: "Rivos Inc., CA, USA"
   timeline: "Summer 2023"
   description: |
     <p>
-    At Rivos, I designed a power- and network-limiter in a GPU-like system. I
-    gained insights into GPU internals. This experience helps me make informed
-    choices when writing efficient, large-scale deep-learning training
-    frameworks.
+    At Rivos, a chip-design startup, I developed a power and network limiter for
+    a GPU-like system, gaining deep insights into GPU architecture. This
+    experience informs my approach to designing efficient, large-scale deep
+    learning training frameworks.
     </p>
 
-- logo: "none"
+- logo: "/images/career-logos/gt.png"
   title: "Masters in Electrical & Computer Engineering"
   venue: "Georgia Institute of Technology, GA, USA"
   timeline: "2022 - 2025"
 
-- logo: "none"
+- logo: "/images/career-logos/ti.png"
   title: "Digital-Design Engineer"
   venue: "Texas Instruments, Bangalore, India"
   timeline: "2019 - 2022"
@@ -53,7 +53,7 @@
     [2] filed by TI.
     </p>
 
-- logo: "null"
+- logo: "/images/career-logos/iitr.png"
   title: "Bachelors in Electronics & Communication Engineering"
-  venue: "Indian Institute of Technology - Roorkee, India"
+  venue: "Indian Institute of Technology - Roorkee"
   timeline: "2015 - 2019"

@@ -31,11 +31,11 @@ const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, d
     <div className="career-item">
       <div className="career-item__upper desktop">
         <div className="career-item__upper__timeline">{timeline}</div>
-        <div className="career-item__upper__logo" />
+        <img className="career-item__upper__logo" src={logo}/>
         <div className="career-item__upper__title">{title}</div>
       </div>
       <div className="career-item__upper mobile">
-        <div className="career-item__upper__logo mobile" />
+        <img className="career-item__upper__logo mobile" src={logo}/>
         <div style={{display: 'flex', flexDirection: 'column'}}>
           <div className="career-item__upper__timeline mobile">{timeline}</div>
           <div className="career-item__upper__title mobile">{title}</div>
