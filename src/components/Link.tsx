@@ -22,7 +22,7 @@ const Link: React.FC<LinkProps> = ({
       target={newTab ? '_blank' : '_self'}
       aria-label={ariaLabel}
       rel="noopener noreferrer"
-      className={twMerge(className, 'hover:text-accent transition-all delay-100')}
+      className={twMerge(className, 'hover:text-accent transition-all duration-100')}
     >
       {children}
     </a>
