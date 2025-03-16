@@ -62,7 +62,7 @@ const Profile: React.FC = () => {
         </AnimateIn>
 
         <AnimateIn
-          className="flex flex-row gap-x-14 text-center text-xs"
+          className="flex flex-row gap-x-16 text-center text-xs"
           baseDelay={0.5}
           staggerDelay={0.1}
           direction="up"
