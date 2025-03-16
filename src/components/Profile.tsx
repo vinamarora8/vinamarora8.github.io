@@ -109,7 +109,7 @@ const ProfileRight: React.FC = () => {
 
 const Profile: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-between gap-10 md:flex-row md:items-start lg:gap-16">
+    <div className="flex flex-col items-center justify-between gap-10 md:flex-row md:items-start md:gap-14 lg:gap-18">
       <ProfileLeft />
       <ProfileRight />
     </div>
