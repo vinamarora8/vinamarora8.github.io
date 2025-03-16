@@ -15,13 +15,12 @@ const ProfileLeft: React.FC = () => {
       staggerDelay={0.1}
     >
       <TiltEffect maxTiltDegrees={5} shadowIntensity={0.05}>
-        <div className="shadow-profile-pic w-[250px] rounded-4xl lg:w-[288px]">
-          <ProgressiveImage
-            lowResSrc="/images/profile-image-low.jpg"
-            highResSrc="/images/profile-image.jpg"
-            alt="Vinam Arora"
-          />
-        </div>
+        <ProgressiveImage
+          lowResSrc="/images/profile-image-low.jpg"
+          highResSrc="/images/profile-image.jpg"
+          alt="Vinam Arora"
+          className="shadow-profile-pic w-[250px] rounded-4xl lg:w-[288px]"
+        />
       </TiltEffect>
 
       <div className="flex flex-col items-center text-center text-lg font-normal">
