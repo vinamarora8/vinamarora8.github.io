@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Custom styles that should not be purged by Tailwind */
 @layer base {
@@ -6,4 +6,10 @@
     font-family: 'Source Serif Pro', serif;
     font-weight: 300;
   }
-} 
+}
+
+@theme {
+  --color-primary: #333;
+  --color-secondary: #666;
+  --color-accent: #4a90e2;
+}

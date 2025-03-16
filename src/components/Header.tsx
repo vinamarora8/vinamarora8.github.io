@@ -1,12 +1,16 @@
 import React from 'react';
 import { Textfit } from 'react-textfit';
 import AnimateIn from './AnimateIn';
-import { Link } from 'react-router-dom';
+import Link from './Link';
 
 const Header: React.FC = () => {
   return (
-    <div className="flex justify justify-between items-center">
-      <AnimateIn className="font-normal w-[32%]" direction="down" baseDelay={0}>
+    <div className="mb-4 flex flex-col items-center justify-between md:flex-row">
+      <AnimateIn
+        className="w-full text-center font-normal md:w-[32%]"
+        direction="down"
+        baseDelay={0}
+      >
         <Textfit
           mode="single"
           max={50} // Maximum font size
@@ -15,9 +19,13 @@ const Header: React.FC = () => {
           Vinam Arora
         </Textfit>
       </AnimateIn>
-      <AnimateIn className="flex font-normal gap-10" direction="down" baseDelay={0.1}>
-        <Link to="/" className="no-underline"><p>Home</p></Link>
-        <Link to="/career" className="no-underline">Career</Link>
+      <AnimateIn className="flex gap-10 font-normal" direction="down" baseDelay={0.1}>
+        <Link href="/#/" newTab={false}>
+          Home
+        </Link>
+        <Link href="/#/career" newTab={false}>
+          Career
+        </Link>
       </AnimateIn>
     </div>
   );

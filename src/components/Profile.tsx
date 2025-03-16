@@ -4,6 +4,7 @@ import { FaGraduationCap } from 'react-icons/fa';
 import AnimateIn from './AnimateIn';
 import ProgressiveImage from './ProgressiveImage';
 import TiltEffect from './TiltEffect';
+import Link from './Link';
 
 const Profile: React.FC = () => {
   return (
@@ -39,23 +40,13 @@ const Profile: React.FC = () => {
           <p>
             I am a second year Ph.D. student in Machine Learning at the Georgia Institute of
             Technology, where I conduct my research at the{' '}
-            <a 
-              href="https://dyerlab.gatech.edu/"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="underline"
-            >
+            <Link href="https://dyerlab.gatech.edu/" className="underline">
               NerDS Lab
-            </a>{' '}
+            </Link>{' '}
             and am advised by{' '}
-            <a
-              href="https://dyerlab.gatech.edu/people/pi-profile/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
+            <Link href="https://dyerlab.gatech.edu/people/pi-profile/" className="underline">
               Prof. Eva Dyer
-            </a>
+            </Link>
             .
           </p>
           <p>
@@ -71,45 +62,43 @@ const Profile: React.FC = () => {
         </AnimateIn>
 
         <AnimateIn
-          className="profile__right__social-links"
+          className="flex flex-row gap-x-14 text-center text-xs"
           baseDelay={0.5}
           staggerDelay={0.1}
           direction="up"
         >
-          <a
+          <Link
             href="https://scholar.google.com/citations?user=XHVqHR4AAAAJ&hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-links__item"
             aria-label="Google Scholar"
+            className="flex flex-col items-center gap-1"
           >
-            <FaGraduationCap />
+            <FaGraduationCap className="w-10 h-10"/>
             <p>Google Scholar</p>
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/vinamarora8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-links__item"
             aria-label="GitHub"
+            className="flex flex-col items-center gap-1"
           >
-            <FaGithub />
+            <FaGithub className="w-10 h-10"/>
             <p>Github</p>
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.linkedin.com/in/vinam-arora/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-links__item"
             aria-label="LinkedIn"
+            className="flex flex-col items-center gap-1"
           >
-            <FaLinkedin />
+            <FaLinkedin className="w-10 h-10"/>
             <p>LinkedIn</p>
-          </a>
-          <a href="mailto:vinam@gatech.edu" className="social-links__item" aria-label="Email">
-            <FaEnvelope />
+          </Link>
+          <Link
+            href="mailto:vinam@gatech.edu"
+            aria-label="Email"
+            className="flex flex-col items-center gap-1"
+          >
+            <FaEnvelope className="w-10 h-10"/>
             <p>Email</p>
-          </a>
+          </Link>
         </AnimateIn>
       </div>
     </div>

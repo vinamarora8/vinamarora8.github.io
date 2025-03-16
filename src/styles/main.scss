@@ -1,6 +1,5 @@
 // Import variables - must be at the very top
 @use 'variables' as *;
-@use 'components/header';
 @use 'components/profile';
 @use 'components/publications';
 @use 'components/footer';
@@ -11,13 +10,6 @@
 /* Import Source Serif Pro font */
 @import '@fontsource/source-serif-pro/300.css';
 @import '@fontsource/source-serif-pro/400.css';
-
-// Reset
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 // Base styles
 body {
@@ -38,16 +30,6 @@ h5,
 h6 {
   font-weight: 400;
   margin-bottom: 1rem;
-}
-
-a {
-  color: $primary-color;
-  // text-decoration: underline;
-  transition: all 0.1s ease-in;
-
-  &:hover {
-    color: $accent-color;
-  }
 }
 
 img {
