@@ -34,8 +34,8 @@ const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, d
         <div className="career-item__bar" />
       </div>
       <div className="career-item__text">
-        <h3>{title}</h3>
-        <h4>{venue}</h4>
+        <div className="career-item__title">{title}</div>
+        <h4 className="career-item__venue">{venue}</h4>
         {description && (
           <div className="career-item__description">
             {description

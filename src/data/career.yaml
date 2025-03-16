@@ -7,7 +7,7 @@
     and timeseries data. Currently, I'm working on cell-type classification from
     neural spike signals, improving transformers for graph node-classification,
     and enhancing interpretability of large-scale neuroscience models.
-
+    <br/>
     I've also dedicated significant time to developing an open-source package
     for deep-learning on neuroscience data (torch_brain).
 
@@ -20,3 +20,8 @@
     gained insights into GPU internals. This experience helps me make informed
     choices when writing efficient, large-scale deep-learning training
     frameworks.
+
+- logo: "none"
+  title: "Masters in Electrical & Computer Engineering"
+  venue: "Georgia Institute of Technology, GA, USA"
+  timeline: "2022 - 2025"
