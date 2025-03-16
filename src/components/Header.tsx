@@ -16,8 +16,8 @@ const Header: React.FC = () => {
         </Textfit>
       </AnimateIn>
       <AnimateIn className="header__nav" direction="down" baseDelay={0.1}>
-        <Link to="/career">Career</Link>
         <Link to="/">Home</Link>
+        <Link to="/career">Career</Link>
       </AnimateIn>
     </div>
   );
