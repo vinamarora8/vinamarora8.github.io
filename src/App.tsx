@@ -11,8 +11,8 @@ function App() {
           <Header />
           <Profile />
           <Publications />
+          <Footer />
       </FontLoader>
-      <Footer />
     </div>
   );
 }
