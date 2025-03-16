@@ -7,7 +7,7 @@ const Career: React.FC = () => {
 
   return (
     <div className="career-container">
-        <AnimateIn direction="down" className="career-list">
+        <AnimateIn direction="down" className="career-list" baseDelay={0.2} staggerDelay={0.1}>
           {careerList.map((item, index) => (
             <CareerItem key={index} {...item} />
           ))}
