@@ -5,20 +5,32 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 16px;
 
   &__title {
     width: 32%;
     text-align: center;
+    font-weight: 400;
   }
 
   &__nav {
     width: 60%;
     text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 40px;
+
+    a {
+      text-decoration: none;
+      font-weight: 400;
+    }
   }
 
   // Media query for smaller screens
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
 
     &__title {
       width: 100%;
@@ -26,6 +38,9 @@
 
     &__nav {
       width: 100%;
+      height: 40px;
+      justify-content: center;
+      align-items: flex-start;
       text-align: center;
     }
   }

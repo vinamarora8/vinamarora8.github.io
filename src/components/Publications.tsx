@@ -72,9 +72,7 @@ const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publi
       </div>
 
       <div
-        className={`publications__abstract ${
-          expanded ? `publications__abstract--visible` : ''
-        }`}
+        className={`publications__abstract ${expanded ? `publications__abstract--visible` : ''}`}
       >
         <div style={{ height: 15 }}></div>
         <span style={{ fontWeight: 400 }}>Abstract: </span>

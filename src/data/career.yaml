@@ -1,0 +1,59 @@
+- logo: '/images/career-logos/gt.png'
+  title: 'Ph.D. in Machine Learning'
+  venue: 'Georgia Institute of Technology, GA, USA'
+  timeline: '2024 - ongoing'
+  description: |
+    <p>My Ph.D. work focuses on developing deep-learning methods for neural, graph,
+    and timeseries data. Currently, I'm working on cell-type classification from
+    neural spike signals, improving transformers for graph node-classification,
+    and enhancing interpretability of large-scale neuroscience models.
+    </p>
+    <p>
+    I have also dedicated significant time to developing an open-source library
+    for deep-learning on neuroscience data 
+    (<a href="https://github.com/neuro-galaxy/torch_brain"
+      target="_blank"
+      rel="noopener noreferrer"
+      >torch_brain</a>).
+    </p>
+
+- logo: '/images/career-logos/rivos.png'
+  title: 'Internship - Microarchitecture Engineer'
+  venue: 'Rivos Inc., CA, USA'
+  timeline: 'Summer 2023'
+  description: |
+    <p>
+    At Rivos, a chip-design startup, I developed a power and network limiter for
+    a GPU-like system, gaining deep insights into GPU architecture. This
+    experience informs my approach to designing efficient, large-scale deep
+    learning training frameworks.
+    </p>
+
+- logo: '/images/career-logos/gt.png'
+  title: 'Masters in Electrical & Computer Engineering'
+  venue: 'Georgia Institute of Technology, GA, USA'
+  timeline: '2022 - 2025'
+
+- logo: '/images/career-logos/ti.png'
+  title: 'Digital-Design Engineer'
+  venue: 'Texas Instruments, Bangalore, India'
+  timeline: '2019 - 2022'
+  description: |
+    <p>
+    My work at TI revolved around designing Digital Signal-Processing algorithms
+    and systems for radio-frequency ADCs. Work was a mix of circuit-level design
+    and writing low-level firmware. This experience has enabled me to think
+    deeply and mathematically about signals and how to extract data from them,
+    which translates to strong fundamentals in understanding and building for
+    neural, graph, and time-varying signals.
+    </p>
+    <p>
+    Some of the projects I worked on are deployed in present-day cell-phone
+    towers, enabling 5G internet. I also was an inventor on two US Patents [1],
+    [2] filed by TI.
+    </p>
+
+- logo: '/images/career-logos/iitr.png'
+  title: 'Bachelors in Electronics & Communication Engineering'
+  venue: 'Indian Institute of Technology - Roorkee'
+  timeline: '2015 - 2019'
