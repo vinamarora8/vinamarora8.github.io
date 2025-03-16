@@ -7,15 +7,13 @@ const Header: React.FC = () => {
   return (
     <div className="header">
       <AnimateIn className="header__title" direction="down" baseDelay={0}>
-        <h1>
-          <Textfit
-            mode="single"
-            max={50} // Maximum font size
-            min={24} // Minimum font size for readability
-          >
-            Vinam Arora
-          </Textfit>
-        </h1>
+        <Textfit
+          mode="single"
+          max={50} // Maximum font size
+          min={24} // Minimum font size for readability
+        >
+          Vinam Arora
+        </Textfit>
       </AnimateIn>
       <div className="header__nav">
         <Link to="/career">Career</Link>
