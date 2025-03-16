@@ -17,7 +17,7 @@ function App() {
           <Footer />
         </FontLoader>
       </div>
-      <Gutter />
+      {/* <Gutter /> */}
     </div>
   );
 }

@@ -62,18 +62,19 @@ const Gutter: React.FC = () => {
     if (!pageLoaded || !ref.current) return;
 
     const svg = d3.select(ref.current);
-    const width = ref.current.clientWidth;
+    //const width = ref.current.clientWidth;
+    const width = 200;
     //const height = ref.current.clientHeight || window.innerHeight;
     const height = 200;
 
-    const tau = 4e-2;
+    const tau = 3e-2;
 
     console.log('Creating neuron network with dimensions:', width, height);
 
     // Clear previous content
     svg.selectAll('*').remove();
 
-    const numNodes = 30; // Reduced number of nodes for better visibility
+    const numNodes = 20; // Reduced number of nodes for better visibility
     
     // Generate dendrites for each neuron
     const generateDendrites = (x: number, y: number, count: number = 5) => {
@@ -92,7 +93,7 @@ const Gutter: React.FC = () => {
         x,
         y,
         k: uniform(150, 200),
-        radius: uniform(4, 6),
+        radius: uniform(3, 4),
         dendrites: generateDendrites(x, y, Math.floor(uniform(3, 7))),
         lastFired: -uniform(0, 5000), // Stagger initial firing
         firingRate: uniform(3000, 8000) // Random firing rate between 3-8 seconds
@@ -120,7 +121,19 @@ const Gutter: React.FC = () => {
         }
       }
     }
-    
+
+    // Filter out nodes that have no connections
+    nodes = nodes.filter(node => {
+      return links.some(link => 
+        link.source.id === node.id || link.target.id === node.id
+      );
+    });
+
+    // Update links to only include connections between remaining nodes
+    links = links.filter(link => 
+      nodes.includes(link.source) && nodes.includes(link.target)
+    );
+
     linksRef.current = links;
 
     // Create a group for links
@@ -161,8 +174,9 @@ const Gutter: React.FC = () => {
       .enter()
       .append('circle')
       .attr('class', 'signal-marker')
-      .attr('r', 1.5)
-      .attr('fill', '#fff')
+      //.attr('r', 1.0)
+      .attr('r', 0.)
+      .attr('fill', '#aaa')
       .attr('opacity', 0); // Initially hidden
       
     // Create a group for neurons
@@ -189,7 +203,7 @@ const Gutter: React.FC = () => {
           .attr('x2', dendrite.x)
           .attr('y2', dendrite.y)
           .attr('stroke', `rgba(${d.k}, ${d.k}, ${d.k}, 0.7)`)
-          .attr('stroke-width', uniform(0.5, 1.5));
+          .attr('stroke-width', uniform(0.5, 1.0));
       });
       
       // Draw cell body (soma)
@@ -199,10 +213,10 @@ const Gutter: React.FC = () => {
         .attr('fill', `rgb(${d.k}, ${d.k}, ${d.k})`)
         .attr('cx', d.x)
         .attr('cy', d.y)
-        .attr('stroke', '#666')
-        .attr('stroke-width', 0.5);
+        // .attr('stroke', '#666')
+        // .attr('stroke-width', 0.5);
         
-      // Add a highlight to make it look more 3D
+      // // Add a highlight to make it look more 3D
       neuron.append('circle')
         .attr('class', 'highlight')
         .attr('r', d.radius * 0.4)
@@ -211,14 +225,14 @@ const Gutter: React.FC = () => {
         .attr('cy', d.y - d.radius * 0.3);
         
       // Add a pulse circle for the action potential animation
-      neuron.append('circle')
-        .attr('class', 'pulse')
-        .attr('r', d.radius)
-        .attr('fill', 'none')
-        .attr('stroke', 'rgba(255, 255, 255, 0)')
-        .attr('stroke-width', 2)
-        .attr('cx', d.x)
-        .attr('cy', d.y);
+      // neuron.append('circle')
+      //   .attr('class', 'pulse')
+      //   .attr('r', d.radius)
+      //   .attr('fill', 'none')
+      //   .attr('stroke', 'rgba(0, 0, 0, 0)')
+      //   //.attr('stroke-width', 2)
+      //   .attr('cx', d.x)
+      //   .attr('cy', d.y);
     });
     
     // Animation function for neuronal firing
@@ -241,11 +255,15 @@ const Gutter: React.FC = () => {
           // 1. Depolarization (rapid rise)
           soma.transition()
             .duration(50)
-            .attr('fill', 'rgba(255, 255, 255, 0.9)')
+            //.attr('fill', 'rgba(128, 0, 0, 0.9)')
+            //.attr('fill', '#ffaec2')
+            .attr('fill', '#111')
             .transition()
             // 2. Repolarization (fall)
             .duration(100)
-            .attr('fill', 'rgba(100, 100, 100, 0.8)')
+            //.attr('fill', 'rgba(100, 100, 100, 0.8)')
+            //.attr('fill', '#7ec3ff')
+            .attr('fill', '#444')
             .transition()
             // 3. Hyperpolarization (undershoot)
             .duration(150)
@@ -256,13 +274,13 @@ const Gutter: React.FC = () => {
             .attr('fill', `rgb(${node.k}, ${node.k}, ${node.k})`);
             
           // Pulse wave animation
-          pulse.attr('stroke', 'rgba(255, 255, 255, 0.7)')
-            .attr('r', node.radius)
-            .transition()
-            .duration(500)
-            .attr('r', node.radius * 3)
-            .attr('stroke', 'rgba(255, 255, 255, 0)')
-            .ease(d3.easeExpOut);
+          // pulse.attr('stroke', 'rgba(255, 255, 255, 0.7)')
+          //   .attr('r', node.radius)
+          //   .transition()
+          //   .duration(500)
+          //   .attr('r', node.radius * 3)
+          //   .attr('stroke', 'rgba(255, 255, 255, 0)')
+          //   .ease(d3.easeExpOut);
             
           // Activate outgoing connections
           links.forEach(link => {
@@ -278,7 +296,7 @@ const Gutter: React.FC = () => {
       links.forEach((link, i) => {
         if (link.active) {
           // Move signal along the path
-          link.signalPosition = (link.signalPosition || 0) + 0.01;
+          link.signalPosition = (link.signalPosition || 0) + 0.1;
           
           if (link.signalPosition >= 1) {
             // Signal reached the target neuron
@@ -341,7 +359,7 @@ const Gutter: React.FC = () => {
   );
 };
 
-function uniform(min: number, max: number) {
+function uniform(min: number, max: number): number {
   return min + Math.random() * (max - min);
 }
 
