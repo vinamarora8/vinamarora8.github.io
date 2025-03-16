@@ -6,14 +6,14 @@ import FontLoader from './components/FontLoader';
 
 function App() {
   return (
-    <FontLoader>
-      <div className="container">
-        <Header />
-        <Profile />
-        <Publications />
-        <Footer />
-      </div>
-    </FontLoader>
+    <div className="container">
+      <FontLoader>
+          <Header />
+          <Profile />
+          <Publications />
+      </FontLoader>
+      <Footer />
+    </div>
   );
 }
 
