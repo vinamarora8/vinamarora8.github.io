@@ -1,16 +1,11 @@
 import React from 'react';
-import { FaLocationDot, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6';
+import { FaLocationDot } from 'react-icons/fa6';
 import AnimateIn from './AnimateIn';
 import ProgressiveImage from './ProgressiveImage';
 import TiltEffect from './TiltEffect';
-import { LiaGraduationCapSolid } from 'react-icons/lia';
-import { FaGraduationCap } from 'react-icons/fa';
-import { AiOutlineGithub, AiOutlineMail } from 'react-icons/ai';
+import { AiOutlineMail } from 'react-icons/ai';
 import { CiLinkedin } from 'react-icons/ci';
-import { FiGithub } from 'react-icons/fi';
-import { PiGithubLogo, PiGraduationCapBold, PiGraduationCapLight } from 'react-icons/pi';
-import { MdEmail, MdOutlineEmail } from 'react-icons/md';
-import { HiOutlineMail } from 'react-icons/hi';
+import { PiGithubLogo, PiGraduationCapLight } from 'react-icons/pi';
 
 const Profile: React.FC = () => {
   return (
