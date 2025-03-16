@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <AnimateIn direction="up" className="footer" duration={0.5}>
+    <AnimateIn direction="up" className="pt-16 text-center text-sm" duration={0.5}>
       <p>© {currentYear} Vinam Arora</p>
     </AnimateIn>
   );
