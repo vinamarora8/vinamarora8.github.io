@@ -1,0 +1,47 @@
+.career-container {
+  display: flex;
+  justify-content: center;
+}
+
+.career-item {
+  $bar-color: #333;
+
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  &__bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    background-color: $bar-color;
+  }
+
+  &__bar {
+    width: 2px;
+    background-color: $bar-color;
+    flex: 1;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 18px;
+
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    h4 {
+      font-weight: 300;
+    }
+  }
+
+}
