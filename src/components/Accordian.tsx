@@ -2,17 +2,13 @@ import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
 
-interface AccordianProps {
-  children: (props: { isExpanded: boolean }) => ReactNode;
-  customToggle?: (props: { isExpanded: boolean; toggleExpanded: () => void }) => ReactNode;
+interface AccordianToggleProps {
+  isExpanded: boolean;
+  toggleExpanded: () => void;
 }
 
-const Accordian: React.FC<AccordianProps> = ({ children, customToggle }) => {
-  const [isExpanded, setExpanded] = useState(false);
-
-  const toggleExpanded = () => setExpanded(!isExpanded);
-
-  const defaultToggle = (
+const AccordianToggle: React.FC<AccordianToggleProps> = ({ isExpanded, toggleExpanded }) => {
+  return (
     <div
       className="group/toggle-button flex cursor-pointer flex-row gap-[9px]"
       onClick={toggleExpanded}
@@ -47,11 +43,20 @@ const Accordian: React.FC<AccordianProps> = ({ children, customToggle }) => {
       </div>
     </div>
   );
+};
+
+interface AccordianProps {
+  children: (props: { isExpanded: boolean }) => ReactNode;
+}
+
+const Accordian: React.FC<AccordianProps> = ({ children }) => {
+  const [isExpanded, setExpanded] = useState(false);
+
+  const toggleExpanded = () => setExpanded(!isExpanded);
 
   return (
     <div className={clsx('flex flex-row gap-[9px]', 'group/full')}>
-      {customToggle ? customToggle({ isExpanded, toggleExpanded }) : defaultToggle}
-
+      <AccordianToggle isExpanded={isExpanded} toggleExpanded={toggleExpanded} />
       {children({ isExpanded })}
     </div>
   );
