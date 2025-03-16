@@ -9,8 +9,12 @@
     and enhancing interpretability of large-scale neuroscience models.
     </p>
     <p>
-    I've also dedicated significant time to developing an open-source package
-    for deep-learning on neuroscience data (torch_brain).
+    I have also dedicated significant time to developing an open-source library
+    for deep-learning on neuroscience data 
+    (<a href="https://github.com/neuro-galaxy/torch_brain"
+      target="_blank"
+      rel="noopener noreferrer"
+      >torch_brain</a>).
     </p>
 
 - logo: "none"
@@ -29,3 +33,27 @@
   title: "Masters in Electrical & Computer Engineering"
   venue: "Georgia Institute of Technology, GA, USA"
   timeline: "2022 - 2025"
+
+- logo: "none"
+  title: "Digital-Design Engineer"
+  venue: "Texas Instruments, Bangalore, India"
+  timeline: "2019 - 2022"
+  description: |
+    <p>
+    My work at TI revolved around designing Digital Signal-Processing algorithms
+    and systems for radio-frequency ADCs. Work was a mix of circuit-level design
+    and writing low-level firmware. This experience has enabled me to think
+    deeply and mathematically about signals and how to extract data from them,
+    which translates to strong fundamentals in understanding and building for
+    neural, graph, and time-varying signals.
+    </p>
+    <p>
+    Some of the projects I worked on are deployed in present-day cell-phone
+    towers, enabling 5G internet. I also was an inventor on two US Patents [1],
+    [2] filed by TI.
+    </p>
+
+- logo: "null"
+  title: "Bachelors in Electronics & Communication Engineering"
+  venue: "Indian Institute of Technology - Roorkee, India"
+  timeline: "2015 - 2019"
