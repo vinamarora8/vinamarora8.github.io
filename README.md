@@ -1,4 +1,4 @@
-# Vinam Arora - Personal Website
+# My Personal Website
 
 ### Prerequisites
 
