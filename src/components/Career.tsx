@@ -3,7 +3,6 @@ import careerData from '../data/career.yaml';
 import AnimateIn from './AnimateIn';
 import clsx from 'clsx';
 import parse from 'html-react-parser';
-import { desc } from 'framer-motion/client';
 import Link from './Link';
 
 const Career: React.FC = () => {
