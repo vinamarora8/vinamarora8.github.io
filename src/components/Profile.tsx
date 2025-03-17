@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaLocationDot, FaEnvelope, FaLinkedin, FaGithub, FaSquareXTwitter } from 'react-icons/fa6';
 import { FaGraduationCap } from 'react-icons/fa';
 import AnimateIn from './AnimateIn';
@@ -7,7 +6,7 @@ import TiltEffect from './TiltEffect';
 import Link from './Link';
 import { IconType } from 'react-icons';
 
-const ProfileLeft: React.FC = () => {
+function ProfileLeft() {
   return (
     <AnimateIn
       className="mg:w-[250px] flex flex-col items-center justify-start gap-8 lg:w-[288px]"
@@ -34,18 +33,15 @@ const ProfileLeft: React.FC = () => {
       </div>
     </AnimateIn>
   );
-};
+}
 
-function SocialLink({
-  icon: Icon,
-  label,
-  href,
-}: {
+interface SocialLinkProps {
   icon: IconType;
   label: string;
   href: string;
-  ariaLabel?: string;
-}) {
+}
+
+function SocialLink({ icon: Icon, label, href }: SocialLinkProps) {
   return (
     <div className="flex w-[70px] justify-center md:w-[80px] lg:w-[90px]">
       <Link href={href} aria-label={label} className="inline-block">
@@ -83,7 +79,7 @@ function SocialLinks() {
   );
 }
 
-const ProfileRight: React.FC = () => {
+function ProfileRight() {
   return (
     <div className="flex w-full flex-col items-center">
       {/* Introduction text */}
@@ -116,15 +112,13 @@ const ProfileRight: React.FC = () => {
       <SocialLinks />
     </div>
   );
-};
+}
 
-const Profile: React.FC = () => {
+export default function Profile() {
   return (
     <div className="flex flex-col items-center justify-between gap-10 md:flex-row md:items-start md:gap-14 lg:gap-18">
       <ProfileLeft />
       <ProfileRight />
     </div>
   );
-};
-
-export default Profile;
+}

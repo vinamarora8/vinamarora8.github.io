@@ -9,13 +9,13 @@ interface LinkProps {
   newTab?: boolean;
 }
 
-const Link: React.FC<LinkProps> = ({
+function Link({
   children,
   href,
   'aria-label': ariaLabel = '',
   className = '',
   newTab = true,
-}) => {
+}: LinkProps) {
   return (
     <a
       href={href}
@@ -27,6 +27,6 @@ const Link: React.FC<LinkProps> = ({
       {children}
     </a>
   );
-};
+}
 
 export default Link;

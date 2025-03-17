@@ -1,11 +1,10 @@
-import React from 'react';
 import careerData from '../data/career.yaml';
 import AnimateIn from './AnimateIn';
 import clsx from 'clsx';
 import parse from 'html-react-parser';
 import Link from './Link';
 
-const Career: React.FC = () => {
+export default function Career() {
   const careerList: CareerItemProps[] = careerData;
 
   return (
@@ -22,9 +21,7 @@ const Career: React.FC = () => {
       </AnimateIn>
     </div>
   );
-};
-
-export default Career;
+}
 
 interface CareerItemProps {
   logo: string;
@@ -34,7 +31,7 @@ interface CareerItemProps {
   description?: string;
 }
 
-const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, description }) => {
+function CareerItem({ logo, title, venue, timeline, description }: CareerItemProps) {
   return (
     <div className="flex items-stretch gap-x-2 md:gap-x-3">
       {/* Left side: */}
@@ -99,4 +96,4 @@ const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, d
       </div>
     </div>
   );
-};
+}

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ReactNode, useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
 
 interface AccordianToggleProps {
@@ -7,7 +7,7 @@ interface AccordianToggleProps {
   toggleExpanded: () => void;
 }
 
-const AccordianToggle: React.FC<AccordianToggleProps> = ({ isExpanded, toggleExpanded }) => {
+function AccordianToggle({ isExpanded, toggleExpanded }: AccordianToggleProps) {
   return (
     <>
       {/* Main container */}
@@ -65,13 +65,13 @@ const AccordianToggle: React.FC<AccordianToggleProps> = ({ isExpanded, toggleExp
       </div>
     </>
   );
-};
+}
 
 interface AccordianProps {
   children: (props: { isExpanded: boolean }) => ReactNode;
 }
 
-const Accordian: React.FC<AccordianProps> = ({ children }) => {
+export default function Accordian({ children }: AccordianProps) {
   const [isExpanded, setExpanded] = useState(false);
 
   const toggleExpanded = () => setExpanded(!isExpanded);
@@ -82,6 +82,4 @@ const Accordian: React.FC<AccordianProps> = ({ children }) => {
       {children({ isExpanded })}
     </div>
   );
-};
-
-export default Accordian;
+}

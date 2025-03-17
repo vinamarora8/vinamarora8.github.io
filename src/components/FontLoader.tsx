@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useContext, ReactNode } from 'react';
+import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
 import FontFaceObserver from 'fontfaceobserver';
 
 // Create a context to share font loading status across components
@@ -15,7 +15,7 @@ interface FontLoaderProps {
   children: ReactNode;
 }
 
-export const FontLoader: React.FC<FontLoaderProps> = ({ children }) => {
+export default function FontLoader({ children }: FontLoaderProps) {
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   useEffect(() => {
@@ -42,6 +42,4 @@ export const FontLoader: React.FC<FontLoaderProps> = ({ children }) => {
   }
 
   return <FontContext.Provider value={{ fontsLoaded }}>{children}</FontContext.Provider>;
-};
-
-export default FontLoader;
+}

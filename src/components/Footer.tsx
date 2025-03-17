@@ -1,7 +1,6 @@
-import React from 'react';
 import AnimateIn from './AnimateIn';
 
-const Footer: React.FC = () => {
+export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -9,6 +8,4 @@ const Footer: React.FC = () => {
       <p>© {currentYear} Vinam Arora</p>
     </AnimateIn>
   );
-};
-
-export default Footer;
+}

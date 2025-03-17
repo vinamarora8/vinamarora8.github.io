@@ -25,9 +25,7 @@ interface Publication {
 
 const myName: string = 'V. Arora';
 
-const Publications: React.FC = () => {
-  const publicationList: Publication[] = publicationsData;
-
+export default function Publications() {
   return (
     <section className="mt-16">
       <AnimateIn baseDelay={0.1} direction="right">
@@ -40,7 +38,7 @@ const Publications: React.FC = () => {
         staggerDelay={0.2}
         direction="right"
       >
-        {publicationList.map((publication, index) => (
+        {(publicationsData as Publication[]).map((publication, index) => (
           <Accordian key={index}>
             {({ isExpanded }) => (
               <PublicationContent expanded={isExpanded} publication={publication} />
@@ -50,14 +48,14 @@ const Publications: React.FC = () => {
       </AnimateIn>
     </section>
   );
-};
+}
 
 interface PublicationContentProps {
   expanded: boolean;
   publication: Publication;
 }
 
-const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publication: pub }) => {
+function PublicationContent({ expanded, publication: pub }: PublicationContentProps) {
   return (
     <div className="my-[6px]">
       {/* Title */}
@@ -132,6 +130,4 @@ const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publi
       </div>
     </div>
   );
-};
-
-export default Publications;
+}

@@ -1,7 +1,7 @@
 import React, { ReactNode, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-interface AnimateIn {
+interface AnimateInProps {
   children: ReactNode | ReactNode[];
   direction: 'up' | 'down' | 'left' | 'right';
   className?: string;
@@ -12,7 +12,7 @@ interface AnimateIn {
   once?: boolean; // Whether to trigger animation only once
 }
 
-const AnimateIn: React.FC<AnimateIn> = ({
+export default function AnimateIn({
   children,
   direction,
   className = '',
@@ -21,7 +21,7 @@ const AnimateIn: React.FC<AnimateIn> = ({
   duration = 0.3,
   threshold = 0.1, // Default to 10% visibility
   once = true, // Default to trigger only once
-}) => {
+}: AnimateInProps) {
   const getDirectionOffset = () => {
     switch (direction) {
       case 'up':
@@ -85,6 +85,4 @@ const AnimateIn: React.FC<AnimateIn> = ({
       ))}
     </motion.div>
   );
-};
-
-export default AnimateIn;
+}

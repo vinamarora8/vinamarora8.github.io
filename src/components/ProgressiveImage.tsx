@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface ProgressiveImageProps {
   lowResSrc: string;
@@ -8,12 +8,12 @@ interface ProgressiveImageProps {
   className?: string;
 }
 
-const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
+export default function ProgressiveImage({
   lowResSrc,
   highResSrc,
   alt,
   className = '',
-}) => {
+}: ProgressiveImageProps) {
   const [isHighResLoaded, setIsHighResLoaded] = useState(false);
 
   useEffect(() => {
@@ -61,6 +61,4 @@ const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
       />
     </div>
   );
-};
-
-export default ProgressiveImage;
+}

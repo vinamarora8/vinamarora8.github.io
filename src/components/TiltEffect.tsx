@@ -13,20 +13,14 @@ interface TiltEffectProps {
   };
 }
 
-export interface TiltState {
-  tilt: { x: number; y: number };
-  shadow: { x: number; y: number; blur: number; spread: number };
-  isHovering: boolean;
-}
-
-const TiltEffect: React.FC<TiltEffectProps> = ({
+export default function TiltEffect({
   children,
   className = '',
   enabled = true,
   maxTiltDegrees = 5,
   perspective = 1000,
   transitionSpeed = { tiltIn: '0.1s', tiltOut: '0.5s' },
-}) => {
+}: TiltEffectProps) {
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -93,6 +87,4 @@ const TiltEffect: React.FC<TiltEffectProps> = ({
       </div>
     </div>
   );
-};
-
-export default TiltEffect;
+}

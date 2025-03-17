@@ -1,8 +1,7 @@
-import React from 'react';
 import AnimateIn from './AnimateIn';
 import Link from './Link';
 
-const Header: React.FC = () => {
+export default function Header() {
   return (
     <div className="mb-4 flex flex-col items-center justify-between md:flex-row">
       <AnimateIn
@@ -22,6 +21,4 @@ const Header: React.FC = () => {
       </AnimateIn>
     </div>
   );
-};
-
-export default Header;
+}
