@@ -1,7 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import careerData from '../data/career.yaml';
 import AnimateIn from './AnimateIn';
 import clsx from 'clsx';
+import parse from 'html-react-parser';
+import { desc } from 'framer-motion/client';
+import Link from './Link';
 
 const Career: React.FC = () => {
   const careerList: CareerItemProps[] = careerData;
@@ -68,8 +71,25 @@ const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, d
                 'flex flex-col gap-y-2 md:gap-y-3',
                 'text-justify text-sm md:text-base'
               )}
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
+            >
+              {parse(description, {
+                replace: (domNode) => {
+                  if (domNode.type === 'tag' && domNode.name === 'a') {
+                    // Get the text content safely
+                    const linkText =
+                      domNode.children?.[0]?.type === 'text'
+                        ? domNode.children[0].data
+                        : domNode.attribs?.href || 'Link';
+
+                    return (
+                      <Link href={domNode.attribs.href} className="underline">
+                        {linkText}
+                      </Link>
+                    );
+                  }
+                },
+              })}
+            </div>
           )}
         </div>
       </div>
