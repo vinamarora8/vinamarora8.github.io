@@ -6,6 +6,9 @@
   --color-primary: #333;
   --color-secondary: #666;
   --color-accent: #4a90e2;
+  --color-comp-gray-100: #e0e0e0;
+  --color-comp-gray-200: #e0e0e0;
+
   --font-weight-normal: 300;
   --font-weight-medium: 400;
   --shadow-profile-pic: 4px 4px 4px rgba(0, 0, 0, 0.1);

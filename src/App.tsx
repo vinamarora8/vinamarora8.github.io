@@ -5,6 +5,7 @@ import Publications from './components/Publications';
 import Footer from './components/Footer';
 import FontLoader from './components/FontLoader';
 import Career from './components/Career';
+import './styles/main.css';
 
 function App() {
   return (
