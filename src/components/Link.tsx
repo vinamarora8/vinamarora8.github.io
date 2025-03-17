@@ -1,5 +1,5 @@
+import clsx from 'clsx';
 import { ReactNode } from 'react';
-import { twMerge } from 'tailwind-merge';
 
 interface LinkProps {
   children: ReactNode | ReactNode[];
@@ -22,7 +22,7 @@ const Link: React.FC<LinkProps> = ({
       target={newTab ? '_blank' : '_self'}
       aria-label={ariaLabel}
       rel="noopener noreferrer"
-      className={twMerge(className, 'hover:text-accent transition-all duration-100')}
+      className={clsx(className, 'hover:text-accent transition-all duration-100')}
     >
       {children}
     </a>
