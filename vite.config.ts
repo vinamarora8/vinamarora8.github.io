@@ -1,10 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import yaml from '@rollup/plugin-yaml'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import yaml from '@rollup/plugin-yaml';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), yaml()],
-  // For user site (username.github.io), we don't need a base path
+  plugins: [react(), yaml(), tailwindcss()],
   base: '/',
-})
+});

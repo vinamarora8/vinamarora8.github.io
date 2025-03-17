@@ -6,6 +6,8 @@ import { GoCommentDiscussion } from 'react-icons/go';
 import { PiPresentation } from 'react-icons/pi';
 import { CgWebsite } from 'react-icons/cg';
 import { IoLinkOutline } from 'react-icons/io5';
+import clsx from 'clsx';
+import Link from './Link';
 
 interface Publication {
   title: string;
@@ -27,13 +29,13 @@ const Publications: React.FC = () => {
   const publicationList: Publication[] = publicationsData;
 
   return (
-    <section className="section publications">
+    <section className="mt-16">
       <AnimateIn baseDelay={0.1} direction="right">
-        <h2 className="section-title">My Publications</h2>
+        <h2>My Publications</h2>
       </AnimateIn>
 
       <AnimateIn
-        className="publications__list"
+        className="flex flex-col gap-8"
         baseDelay={0.3}
         staggerDelay={0.2}
         direction="right"
@@ -57,52 +59,75 @@ interface PublicationContentProps {
 
 const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publication: pub }) => {
   return (
-    <div className="publications__content">
-      <h3 className="publications__title">{pub.title}</h3>
-      <div className="publications__authors">
+    <div className="my-[6px]">
+      {/* Title */}
+      <p className="text-base leading-6 font-medium md:text-[20px]">{pub.title}</p>
+
+      {/* Authors */}
+      <div className="mb-2 text-sm md:text-base">
         {pub.authors.map((author, index) => (
           <React.Fragment key={index}>
-            <span className={author === myName ? 'myself' : ''}>{author}</span>
+            <span className={author === myName ? 'font-medium' : ''}>{author}</span>
             {index < pub.authors.length - 1 && ', '}
           </React.Fragment>
         ))}
       </div>
-      <div className="publications__venue">
-        {pub.venue}, {pub.year}
-      </div>
 
+      <p className="text-sm font-medium md:text-base">
+        {pub.venue}, {pub.year}
+      </p>
+
+      {/* Abstract */}
       <div
-        className={`publications__abstract ${expanded ? `publications__abstract--visible` : ''}`}
+        className={clsx(
+          'text-sm md:text-base',
+          'max-h-0 overflow-hidden text-justify opacity-0',
+          'transition-all duration-300 ease-in-out',
+          expanded && 'max-h-[1000px] opacity-100'
+        )}
       >
         <div style={{ height: 15 }}></div>
-        <span style={{ fontWeight: 400 }}>Abstract: </span>
+        <span className="font-medium">Abstract: </span>
         {pub.abstract}
         <div style={{ height: 15 }}></div>
       </div>
 
-      <div className="publications__links">
+      {/* Links */}
+      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1">
         {pub.links.paper && (
-          <a href={pub.links.paper} target="_blank" rel="noopener noreferrer">
-            <CgWebsite /> <p>Paper</p>
-          </a>
+          <Link href={pub.links.paper} aria-label="Paper" className="flex items-center gap-x-1.5">
+            <CgWebsite />
+            <p>Paper</p>
+          </Link>
         )}
 
         {pub.links.project && (
-          <a href={pub.links.project} target="_blank" rel="noopener noreferrer">
-            <IoLinkOutline /> <p>Project Page</p>
-          </a>
+          <Link
+            href={pub.links.project}
+            aria-label="Project Page"
+            className="flex items-center gap-x-1.5"
+          >
+            <IoLinkOutline />
+            <p>Project Page</p>
+          </Link>
         )}
 
         {pub.links.poster && (
-          <a href={pub.links.poster} target="_blank" rel="noopener noreferrer">
-            <PiPresentation /> <p>Poster</p>
-          </a>
+          <Link href={pub.links.poster} aria-label="Poster" className="flex items-center gap-x-1.5">
+            <PiPresentation />
+            <p>Poster</p>
+          </Link>
         )}
 
         {pub.links.openReview && (
-          <a href={pub.links.openReview} target="_blank" rel="noopener noreferrer">
-            <GoCommentDiscussion /> <p>OpenReview</p>
-          </a>
+          <Link
+            href={pub.links.openReview}
+            aria-label="OpenReview"
+            className="flex items-center gap-x-1.5"
+          >
+            <GoCommentDiscussion />
+            <p>OpenReview</p>
+          </Link>
         )}
       </div>
     </div>

@@ -1,13 +1,21 @@
 import React from 'react';
 import careerData from '../data/career.yaml';
 import AnimateIn from './AnimateIn';
+import clsx from 'clsx';
+import parse from 'html-react-parser';
+import Link from './Link';
 
 const Career: React.FC = () => {
   const careerList: CareerItemProps[] = careerData;
 
   return (
-    <div className="career-container">
-      <AnimateIn direction="down" className="career-list" baseDelay={0.2} staggerDelay={0.1}>
+    <div className="my-8 flex flex-row justify-center">
+      <AnimateIn
+        direction="down"
+        baseDelay={0.2}
+        staggerDelay={0.1}
+        className="flex flex-col gap-y-2"
+      >
         {careerList.map((item, index) => (
           <CareerItem key={index} {...item} />
         ))}
@@ -28,31 +36,64 @@ interface CareerItemProps {
 
 const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, description }) => {
   return (
-    <div className="career-item">
-      <div className="career-item__upper desktop">
-        <div className="career-item__upper__timeline">{timeline}</div>
-        <img className="career-item__upper__logo" src={logo} />
-        <div className="career-item__upper__title">{title}</div>
+    <div className="flex items-stretch gap-x-2 md:gap-x-3">
+      {/* Left side: */}
+      <div
+        className={clsx(
+          'invisible w-0 overflow-hidden md:visible md:w-[100px]',
+          'h-14',
+          'flex flex-col justify-center',
+          'text-right text-sm font-medium'
+        )}
+      >
+        <p>{timeline}</p>
       </div>
-      <div className="career-item__upper mobile">
-        <img className="career-item__upper__logo mobile" src={logo} />
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div className="career-item__upper__timeline mobile">{timeline}</div>
-          <div className="career-item__upper__title mobile">{title}</div>
+
+      {/* Middle (logo) */}
+      <div className="ml-[-12px] flex flex-col items-center md:ml-0">
+        <div className={clsx('h-10 w-10', 'md:h-14 md:w-14', 'flex flex-col justify-center')}>
+          <img src={logo} className="h-auto w-full" alt={title} />
         </div>
+
+        <div className="bg-secondary h-[calc(100%-var(--spacing)*10)] w-0.5 rounded-full"></div>
       </div>
-      <div className="career-item__lower">
-        <div className="career-item__lower__left" />
-        <div className="career-item__lower__bar-container">
-          <div className="career-item__lower__bar" />
+
+      {/* Right side */}
+      <div className={'mb-3 flex max-w-[500px] flex-col'}>
+        {/* Title container */}
+        <div className={clsx(`flex min-h-10 flex-col justify-center md:h-14`)}>
+          <p className="text-xs font-medium md:hidden md:text-base">{timeline}</p>
+          <p className="text-base font-medium md:text-xl">{title}</p>
         </div>
-        <div className="career-item__lower__text">
-          <div className="career-item__lower__text__venue">{venue}</div>
+
+        {/* Description */}
+        <div className="flex flex-col gap-y-3">
+          <p className="text-base md:text-xl">{venue}</p>
           {description && (
             <div
-              className="career-item__lower__text__description"
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
+              className={clsx(
+                'flex flex-col gap-y-2 md:gap-y-3',
+                'text-justify text-sm md:text-base'
+              )}
+            >
+              {parse(description, {
+                replace: (domNode) => {
+                  if (domNode.type === 'tag' && domNode.name === 'a') {
+                    // Get the text content safely
+                    const linkText =
+                      domNode.children?.[0]?.type === 'text'
+                        ? domNode.children[0].data
+                        : domNode.attribs?.href || 'Link';
+
+                    return (
+                      <Link href={domNode.attribs.href} className="underline">
+                        {linkText}
+                      </Link>
+                    );
+                  }
+                },
+              })}
+            </div>
           )}
         </div>
       </div>

@@ -5,27 +5,30 @@ import Publications from './components/Publications';
 import Footer from './components/Footer';
 import FontLoader from './components/FontLoader';
 import Career from './components/Career';
+import './styles/main.css';
 
 function App() {
   return (
     <Router>
-      <div className="container">
-        <FontLoader>
-          <Header />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Profile />
-                  <Publications />
-                </>
-              }
-            />
-            <Route path="/career" element={<Career />} />
-          </Routes>
-          <Footer />
-        </FontLoader>
+      <div className="px-5 md:px-8">
+        <div className="mx-auto my-8 w-full max-w-[900px]">
+          <FontLoader>
+            <Header />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Profile />
+                    <Publications />
+                  </>
+                }
+              />
+              <Route path="/career" element={<Career />} />
+            </Routes>
+            <Footer />
+          </FontLoader>
+        </div>
       </div>
     </Router>
   );

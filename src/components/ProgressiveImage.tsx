@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React, { useState, useEffect } from 'react';
 
 interface ProgressiveImageProps {
@@ -25,12 +26,12 @@ const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
   }, [highResSrc]);
 
   return (
-    <div className={`progressive-image-container ${className}`}>
+    <div className={clsx('relative overflow-hidden', className)}>
       {/* Low-res image (always present, hidden when high-res is loaded) */}
       <img
         src={lowResSrc}
         alt={alt}
-        className="progressive-image low-res"
+        className="low-res block h-full w-full object-cover"
         style={{
           opacity: isHighResLoaded ? 0 : 1,
           filter: 'blur(10px)',
@@ -48,7 +49,7 @@ const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
       <img
         src={highResSrc}
         alt={alt}
-        className="progressive-image high-res"
+        className="high-res block h-full w-full object-cover"
         style={{
           opacity: isHighResLoaded ? 1 : 0,
           position: 'relative',

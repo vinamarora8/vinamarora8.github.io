@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://vinamarora8.github.io",
+  "homepage": "https://vinam.dev",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -17,20 +17,20 @@
     "@fontsource/source-serif-pro": "^5.2.5",
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/fontfaceobserver": "^2.1.3",
+    "clsx": "^2.1.1",
     "fontfaceobserver": "^2.3.0",
     "framer-motion": "^12.5.0",
+    "html-react-parser": "^5.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.3.0",
-    "react-textfit": "^1.1.1",
-    "sass": "^1.85.1"
+    "react-router-dom": "^7.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@tailwindcss/vite": "^4.0.14",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
-    "@types/react-textfit": "^1.1.4",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
@@ -38,6 +38,8 @@
     "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.14",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
