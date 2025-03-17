@@ -23,7 +23,7 @@ const ProfileLeft: React.FC = () => {
         />
       </TiltEffect>
 
-      <div className="flex flex-col items-center text-center text-lg font-medium">
+      <div className="flex flex-col items-center text-center text-base font-medium md:text-lg">
         <p>Machine Learning Ph.D. Student</p>
         <p>@ Georgia Tech</p>
         <div className="text-secondary mt-2.5 flex flex-row items-center gap-1.5">
@@ -39,7 +39,7 @@ const ProfileRight: React.FC = () => {
   return (
     <div className="flex w-full flex-col items-center">
       <AnimateIn baseDelay={0.2} direction="right" staggerDelay={0.05}>
-        <p className="mb-5 text-justify text-lg leading-[25px]">
+        <p className="mb-5 text-justify text-base leading-[25px] md:text-lg">
           I am a second year Ph.D. student in Machine Learning at the Georgia Institute of
           Technology, where I conduct my research at the{' '}
           <Link href="https://dyerlab.gatech.edu/" className="underline">
@@ -51,12 +51,12 @@ const ProfileRight: React.FC = () => {
           </Link>
           .
         </p>
-        <p className="mb-5 text-justify text-lg leading-[25px]">
+        <p className="mb-5 text-justify text-base leading-[25px] md:text-lg">
           My areas of interest are Self-supervised Learning and Learning from large-scale data. I
           like working with challenging datasets and am actively working on developing deep learning
           methods for computational neuroscience, graphs, and timeseries.
         </p>
-        <p className="mb-5 text-justify text-lg leading-[25px]">
+        <p className="mb-5 text-justify text-base leading-[25px] md:text-lg">
           I did my undergrad in Electronics and Communication Engineering from the Indian Institute
           of Technology - Roorkee. Before diving into machine learning research, I used to work as a
           chip-design engineer at Texas Instruments.
