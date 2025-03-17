@@ -7,6 +7,7 @@ interface LinkProps {
   'aria-label'?: string;
   className?: string;
   newTab?: boolean;
+  hoverStyle?: boolean;
 }
 
 function Link({
@@ -15,6 +16,7 @@ function Link({
   'aria-label': ariaLabel = '',
   className = '',
   newTab = true,
+  hoverStyle = true,
 }: LinkProps) {
   return (
     <a
@@ -22,7 +24,7 @@ function Link({
       target={newTab ? '_blank' : '_self'}
       aria-label={ariaLabel}
       rel="noopener noreferrer"
-      className={clsx(className, 'hover:text-accent transition-all duration-100')}
+      className={clsx(className, hoverStyle && 'hover:text-accent transition-all duration-100')}
     >
       {children}
     </a>

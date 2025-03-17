@@ -9,7 +9,9 @@ export default function Header() {
         direction="down"
         baseDelay={0}
       >
-        Vinam Arora
+        <Link href="/#/" newTab={false} hoverStyle={false}>
+          Vinam Arora
+        </Link>
       </AnimateIn>
       <AnimateIn className="flex gap-10 text-lg font-medium" direction="down" baseDelay={0.1}>
         <Link href="/#/" newTab={false}>
