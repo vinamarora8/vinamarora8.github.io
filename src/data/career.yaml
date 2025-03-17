@@ -11,8 +11,7 @@
     <p>
     I have also dedicated significant time to developing an open-source library
     for deep-learning on neuroscience data 
-    (<a href="https://github.com/neuro-galaxy/torch_brain"
-      >torch-brain</a>).
+    <a href="https://github.com/neuro-galaxy/torch_brain">[torch-brain]</a>.
     </p>
 
 - logo: '/images/career-logos/rivos.png'
@@ -47,8 +46,9 @@
     </p>
     <p>
     Some of the projects I worked on are deployed in present-day cell-phone
-    towers, enabling 5G internet. I also was an inventor on two US Patents [1],
-    [2] filed by TI.
+    towers, enabling 5G internet. I also was an inventor on two US Patents 
+    <a href="https://patents.google.com/patent/US11496124B1/en">[1]</a>,
+    <a href="https://patents.google.com/patent/US20250055473A1/en">[2]</a> filed by TI.
     </p>
 
 - logo: '/images/career-logos/iitr.png'

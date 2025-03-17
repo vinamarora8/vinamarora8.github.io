@@ -49,7 +49,7 @@ const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, d
         <p>{timeline}</p>
       </div>
 
-      {/* Middle (logo) */}
+      {/* Middle (logo and bar) */}
       <div className="ml-[-12px] flex flex-col items-center md:ml-0">
         <div className={clsx('h-10 w-10', 'md:h-14 md:w-14', 'flex flex-col justify-center')}>
           <img src={logo} className="h-auto w-full" alt={title} />
