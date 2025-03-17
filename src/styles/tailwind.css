@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import '@fontsource/source-serif-pro/300.css';
+@import '@fontsource/source-serif-pro/400.css';
 
 @theme {
   --color-primary: #333;
