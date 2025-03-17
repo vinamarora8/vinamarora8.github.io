@@ -1,10 +1,11 @@
 import React from 'react';
-import { FaLocationDot, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa6';
+import { FaLocationDot, FaEnvelope, FaLinkedin, FaGithub, FaSquareXTwitter } from 'react-icons/fa6';
 import { FaGraduationCap } from 'react-icons/fa';
 import AnimateIn from './AnimateIn';
 import ProgressiveImage from './ProgressiveImage';
 import TiltEffect from './TiltEffect';
 import Link from './Link';
+import { IconType } from 'react-icons';
 
 const ProfileLeft: React.FC = () => {
   return (
@@ -35,9 +36,57 @@ const ProfileLeft: React.FC = () => {
   );
 };
 
+function SocialLink({
+  icon: Icon,
+  label,
+  href,
+}: {
+  icon: IconType;
+  label: string;
+  href: string;
+  ariaLabel?: string;
+}) {
+  return (
+    <div className="flex w-[90px] items-center">
+      <Link href={href} aria-label={label} className="mx-auto inline-block">
+        <div className="flex flex-col items-center justify-end gap-1">
+          <Icon className="h-10 w-10" />
+          <p>{label}</p>
+        </div>
+      </Link>
+    </div>
+  );
+}
+
+function SocialLinks() {
+  return (
+    <AnimateIn
+      className="mt-8 flex flex-row flex-wrap justify-center gap-y-7 text-xs md:mt-2"
+      baseDelay={0.5}
+      staggerDelay={0.1}
+      direction="up"
+    >
+      <SocialLink
+        icon={FaGraduationCap}
+        label="Google Scholar"
+        href="https://scholar.google.com/citations?user=XHVqHR4AAAAJ&hl=en"
+      />
+      <SocialLink icon={FaGithub} label="Github" href="https://github.com/vinamarora8" />
+      <SocialLink icon={FaSquareXTwitter} label="Twitter" href="https://x.com/vinam_arora" />
+      <SocialLink
+        icon={FaLinkedin}
+        label="LinkedIn"
+        href="https://www.linkedin.com/in/vinam-arora/"
+      />
+      <SocialLink icon={FaEnvelope} label="Email" href="mailto:vinam@gatech.edu" />
+    </AnimateIn>
+  );
+}
+
 const ProfileRight: React.FC = () => {
   return (
     <div className="flex w-full flex-col items-center">
+      {/* Introduction text */}
       <AnimateIn baseDelay={0.2} direction="right" staggerDelay={0.05}>
         <p className="mb-5 text-justify text-base leading-[25px] md:text-lg">
           I am a second year Ph.D. student in Machine Learning at the Georgia Institute of
@@ -63,45 +112,8 @@ const ProfileRight: React.FC = () => {
         </p>
       </AnimateIn>
 
-      <AnimateIn
-        className="mt-8 flex flex-row gap-8 text-center text-xs md:mt-2 md:gap-10 lg:gap-16"
-        baseDelay={0.5}
-        staggerDelay={0.1}
-        direction="up"
-      >
-        <Link
-          href="https://scholar.google.com/citations?user=XHVqHR4AAAAJ&hl=en"
-          aria-label="Google Scholar"
-          className="flex flex-col items-center gap-1"
-        >
-          <FaGraduationCap className="h-10 w-10" />
-          <p>Google Scholar</p>
-        </Link>
-        <Link
-          href="https://github.com/vinamarora8"
-          aria-label="GitHub"
-          className="flex flex-col items-center gap-1"
-        >
-          <FaGithub className="h-10 w-10" />
-          <p>Github</p>
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/vinam-arora/"
-          aria-label="LinkedIn"
-          className="flex flex-col items-center gap-1"
-        >
-          <FaLinkedin className="h-10 w-10" />
-          <p>LinkedIn</p>
-        </Link>
-        <Link
-          href="mailto:vinam@gatech.edu"
-          aria-label="Email"
-          className="flex flex-col items-center gap-1"
-        >
-          <FaEnvelope className="h-10 w-10" />
-          <p>Email</p>
-        </Link>
-      </AnimateIn>
+      {/* Social links */}
+      <SocialLinks />
     </div>
   );
 };
