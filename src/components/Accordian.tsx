@@ -20,7 +20,8 @@ const AccordianToggle: React.FC<AccordianToggleProps> = ({ isExpanded, toggleExp
             'absolute h-full w-full rounded-tl-[3px] rounded-bl-[3px]',
             'bg-gradient-to-b from-[#ffaec2] to-[#7ec3ff]',
             'opacity-0 group-hover/full:opacity-100',
-            'transition-all duration-100 ease-in'
+            'transition-all duration-100 ease-in',
+            isExpanded && 'opacity-100'
           )}
         />
       </div>
