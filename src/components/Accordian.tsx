@@ -48,18 +48,18 @@ function AccordianToggle({ isExpanded, toggleExpanded }: AccordianToggleProps) {
             'mt-[10px]',
             'text-[#aaa]',
             // Change color when hovering on the main container
-            `group-hover/toggle-button:text-[#ffaec2]`,
-            'transition-all duration-100 ease-in'
+            `group-hover/toggle-button:text-[#ffaec2]`
           )}
+          style={{ transition: 'color 0.1s ease-in' }}
         >
           <FaChevronDown
             style={{
               transform: isExpanded ? 'rotate(180deg)' : '',
-              width: '9px',
               height: '9px',
-              transition: 'all 0.2s ease-in-out',
+              width: '9px',
+              transition: 'transform 0.2s ease-in-out',
+              strokeWidth: '30px',
             }}
-            strokeWidth="30px"
           />
         </div>
       </div>
