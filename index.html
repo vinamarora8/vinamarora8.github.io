@@ -38,9 +38,18 @@
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
-    <!-- Analytics: Goat counter -->
-    <script data-goatcounter="https://vinam.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <!-- Analytics: Goat counter (https://www.goatcounter.com/help/spa) -->
+    <script>
+      window.goatcounter = {no_onload: true}
+  
+      window.addEventListener('hashchange', function(e) {
+          window.goatcounter.count({
+              path: location.pathname + location.search + location.hash,
+          })
+      })
+  </script>
+  <script data-goatcounter="https://vinam.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 
     <script type="module" crossorigin src="/assets/index-D9tDEWdb.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-D32rOhmR.css">
