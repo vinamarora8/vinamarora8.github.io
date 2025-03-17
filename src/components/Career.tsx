@@ -11,7 +11,12 @@ const Career: React.FC = () => {
 
   return (
     <div className="my-8 flex flex-row justify-center">
-      <AnimateIn direction="down" baseDelay={0.2} staggerDelay={0.1} className="flex flex-col">
+      <AnimateIn
+        direction="down"
+        baseDelay={0.2}
+        staggerDelay={0.1}
+        className="flex flex-col gap-y-2"
+      >
         {careerList.map((item, index) => (
           <CareerItem key={index} {...item} />
         ))}
@@ -32,7 +37,7 @@ interface CareerItemProps {
 
 const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, description }) => {
   return (
-    <div className="flex items-stretch gap-x-3">
+    <div className="flex items-stretch gap-x-2 md:gap-x-3">
       {/* Left side: */}
       <div
         className={clsx(
@@ -46,7 +51,7 @@ const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, d
       </div>
 
       {/* Middle (logo) */}
-      <div className="ml-[-20px] flex flex-col items-center md:ml-0">
+      <div className="ml-[-12px] flex flex-col items-center md:ml-0">
         <div className={clsx('h-10 w-10', 'md:h-14 md:w-14', 'flex flex-col justify-center')}>
           <img src={logo} className="h-auto w-full" alt={title} />
         </div>
@@ -59,12 +64,12 @@ const CareerItem: React.FC<CareerItemProps> = ({ logo, title, venue, timeline, d
         {/* Title container */}
         <div className={clsx(`flex min-h-10 flex-col justify-center md:h-14`)}>
           <p className="text-xs font-medium md:hidden md:text-base">{timeline}</p>
-          <p className="text-sm font-medium md:text-xl">{title}</p>
+          <p className="text-base font-medium md:text-xl">{title}</p>
         </div>
 
         {/* Description */}
         <div className="flex flex-col gap-y-3">
-          <p className="text-sm md:text-xl">{venue}</p>
+          <p className="text-base md:text-xl">{venue}</p>
           {description && (
             <div
               className={clsx(
