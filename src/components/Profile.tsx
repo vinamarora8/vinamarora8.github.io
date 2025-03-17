@@ -47,11 +47,11 @@ function SocialLink({
   ariaLabel?: string;
 }) {
   return (
-    <div className="flex w-[90px] items-center">
-      <Link href={href} aria-label={label} className="mx-auto inline-block">
-        <div className="flex flex-col items-center justify-end gap-1">
+    <div className="flex w-[70px] justify-center md:w-[80px] lg:w-[90px]">
+      <Link href={href} aria-label={label} className="inline-block">
+        <div className="flex flex-col items-center gap-1">
           <Icon className="h-10 w-10" />
-          <p>{label}</p>
+          <p className="text-center">{label}</p>
         </div>
       </Link>
     </div>
@@ -61,7 +61,7 @@ function SocialLink({
 function SocialLinks() {
   return (
     <AnimateIn
-      className="mt-8 flex flex-row flex-wrap justify-center gap-y-7 text-xs md:mt-2"
+      className="mt-8 flex flex-row flex-wrap justify-center gap-y-3 text-xs md:mt-2"
       baseDelay={0.5}
       staggerDelay={0.1}
       direction="up"
