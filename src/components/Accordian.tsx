@@ -8,9 +8,6 @@ interface AccordianToggleProps {
 }
 
 const AccordianToggle: React.FC<AccordianToggleProps> = ({ isExpanded, toggleExpanded }) => {
-  const gradientStart = '#ffaec2';
-  const gradientEnd = '#7ec3ff';
-
   return (
     <>
       {/* Main container */}
@@ -36,7 +33,7 @@ const AccordianToggle: React.FC<AccordianToggleProps> = ({ isExpanded, toggleExp
               'absolute h-full w-full',
               'rounded-tl-[3px] rounded-bl-[3px]',
               // Gradient define
-              `bg-gradient-to-b from-[${gradientStart}] to-[${gradientEnd}]`,
+              'bg-gradient-to-b from-[#ffaec2] to-[#7ec3ff]',
               // Visibility switches
               'opacity-0 group-hover/full:opacity-100',
               isExpanded && 'opacity-100',
@@ -51,7 +48,7 @@ const AccordianToggle: React.FC<AccordianToggleProps> = ({ isExpanded, toggleExp
             'mt-[10px]',
             'text-[#aaa]',
             // Change color when hovering on the main container
-            `group-hover/toggle-button:text-[${gradientStart}]`,
+            `group-hover/toggle-button:text-[#ffaec2]`,
             'transition-all duration-100 ease-in'
           )}
         >
