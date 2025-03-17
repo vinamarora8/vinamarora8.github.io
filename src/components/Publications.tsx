@@ -60,8 +60,10 @@ interface PublicationContentProps {
 const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publication: pub }) => {
   return (
     <div className="my-[9px]">
+      {/* Title */}
       <p className="text-[20px] leading-6 font-medium">{pub.title}</p>
 
+      {/* Authors */}
       <div className="mb-2">
         {pub.authors.map((author, index) => (
           <React.Fragment key={index}>
@@ -75,6 +77,7 @@ const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publi
         {pub.venue}, {pub.year}
       </p>
 
+      {/* Abstract */}
       <div
         className={clsx(
           'max-h-0 overflow-hidden text-justify opacity-0',
@@ -88,6 +91,7 @@ const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publi
         <div style={{ height: 15 }}></div>
       </div>
 
+      {/* Links */}
       <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1">
         {pub.links.paper && (
           <Link href={pub.links.paper} aria-label="Paper" className="flex items-center gap-x-1.5">
