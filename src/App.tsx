@@ -24,15 +24,7 @@ function App() {
                   </>
                 }
               />
-              <Route
-                path="/career"
-                element={
-                  <>
-                    <Career />
-                    <TailwindTest />
-                  </>
-                }
-              />
+              <Route path="/career" element={<Career />} />
             </Routes>
             <Footer />
           </FontLoader>
