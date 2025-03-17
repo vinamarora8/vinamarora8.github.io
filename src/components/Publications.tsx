@@ -59,12 +59,12 @@ interface PublicationContentProps {
 
 const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publication: pub }) => {
   return (
-    <div className="my-[9px]">
+    <div className="my-[6px]">
       {/* Title */}
-      <p className="text-[20px] leading-6 font-medium">{pub.title}</p>
+      <p className="text-base leading-6 font-medium md:text-[20px]">{pub.title}</p>
 
       {/* Authors */}
-      <div className="mb-2">
+      <div className="mb-2 text-sm md:text-base">
         {pub.authors.map((author, index) => (
           <React.Fragment key={index}>
             <span className={author === myName ? 'font-medium' : ''}>{author}</span>
@@ -73,20 +73,21 @@ const PublicationContent: React.FC<PublicationContentProps> = ({ expanded, publi
         ))}
       </div>
 
-      <p className="font-medium">
+      <p className="text-sm font-medium md:text-base">
         {pub.venue}, {pub.year}
       </p>
 
       {/* Abstract */}
       <div
         className={clsx(
+          'text-sm md:text-base',
           'max-h-0 overflow-hidden text-justify opacity-0',
           'transition-all duration-300 ease-in-out',
           expanded && 'max-h-[1000px] opacity-100'
         )}
       >
         <div style={{ height: 15 }}></div>
-        <span style={{ fontWeight: 400 }}>Abstract: </span>
+        <span className="font-medium">Abstract: </span>
         {pub.abstract}
         <div style={{ height: 15 }}></div>
       </div>
