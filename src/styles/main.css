@@ -2,16 +2,21 @@
 @import '@fontsource/source-serif-pro/300.css';
 @import '@fontsource/source-serif-pro/400.css';
 
+:root {
+  color-scheme: light dark;
+}
+
 @theme {
-  --color-primary: #333;
-  --color-secondary: #666;
+  --color-primary: light-dark(#333, oklch(0.923 0.003 48.717));
+  --color-secondary: light-dark(#666, #aaa);
+  --color--background: light-dark(#fff, #171717);
   --color-accent: #4a90e2;
   --color-comp-gray-100: #e0e0e0;
   --color-comp-gray-200: #e0e0e0;
 
   --font-weight-normal: 300;
   --font-weight-medium: 400;
-  --shadow-profile-pic: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  --shadow-profile-pic: 4px 4px 4px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
   --spacing: 0.25rem;
 }
 
@@ -21,6 +26,11 @@
     font-family: 'Source Serif Pro', serif;
     font-weight: var(--font-weight-normal);
     color: var(--color-primary);
+    background-color: var(--color--background);
+
+    /* font smoothing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1,
