@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import '@fontsource/source-serif-pro/300.css';
 @import '@fontsource/source-serif-pro/400.css';
+@import '@fontsource/source-serif-pro/600.css';
 
 :root {
   color-scheme: light dark;
