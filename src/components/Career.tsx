@@ -38,7 +38,7 @@ function CareerItem({ logo, title, venue, timeline, description }: CareerItemPro
       <div
         className={clsx(
           'invisible w-0 overflow-hidden md:visible md:w-[100px]',
-          'h-14',
+          'h-10',
           'flex flex-col justify-center',
           'text-right text-sm font-medium'
         )}
@@ -48,7 +48,7 @@ function CareerItem({ logo, title, venue, timeline, description }: CareerItemPro
 
       {/* Middle (logo and bar) */}
       <div className="ml-[-12px] flex flex-col items-center md:ml-0">
-        <div className={clsx('h-10 w-10', 'md:h-14 md:w-14', 'flex flex-col justify-center')}>
+        <div className={clsx('aspect-square w-10', 'flex flex-col justify-center')}>
           <img src={logo} className="h-auto w-full" alt={title} />
         </div>
 
@@ -58,14 +58,14 @@ function CareerItem({ logo, title, venue, timeline, description }: CareerItemPro
       {/* Right side */}
       <div className={'mb-3 flex max-w-[500px] flex-col'}>
         {/* Title container */}
-        <div className={clsx(`flex min-h-10 flex-col justify-center md:h-14`)}>
+        <div className={clsx(`flex min-h-10 flex-col justify-center md:h-10`)}>
           <p className="text-xs font-medium md:hidden md:text-base">{timeline}</p>
-          <p className="text-base font-medium md:text-xl dark:font-semibold">{title}</p>
+          <p className="text-base font-medium md:text-xl">{title}</p>
         </div>
 
         {/* Description */}
         <div className="flex flex-col gap-y-3">
-          <p className="text-base font-normal md:text-xl dark:font-medium">{venue}</p>
+          <p className="text-base font-normal md:text-xl">{venue}</p>
           {description && (
             <div
               className={clsx(

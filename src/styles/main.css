@@ -3,14 +3,15 @@
 @import '@fontsource/source-serif-pro/400.css';
 @import '@fontsource/source-serif-pro/600.css';
 
+/* 
 :root {
   color-scheme: light dark;
-}
+} */
 
 @theme {
   --color-primary: light-dark(#333, oklch(0.923 0.003 48.717));
   --color-secondary: light-dark(#666, #aaa);
-  --color--background: light-dark(#fff, #171717);
+  --color-background: light-dark(#fff, #171717);
   --color-accent: light-dark(#4a90e2, #447ab8);
 
   /* Font weight overrides for Source-Sans */
@@ -30,7 +31,7 @@
     font-family: 'Source Serif Pro', serif;
     font-weight: var(--font-weight-normal);
     color: var(--color-primary);
-    background-color: var(--color--background);
+    background-color: var(--color-background);
 
     /* font smoothing */
     -webkit-font-smoothing: antialiased;

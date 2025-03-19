@@ -81,7 +81,7 @@ function SocialLinks() {
 
 function ProfileRight() {
   return (
-    <div className="flex w-full flex-col items-center font-normal dark:font-medium">
+    <div className="flex w-full flex-col items-center font-normal">
       {/* Introduction text */}
       <AnimateIn baseDelay={0.2} direction="right" staggerDelay={0.05}>
         <p className="mb-5 text-justify text-base leading-[25px] md:text-lg">
