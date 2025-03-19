@@ -23,7 +23,7 @@ function AccordianToggle({ isExpanded, toggleExpanded }: AccordianToggleProps) {
               'absolute h-full w-full',
               'rounded-tl-[3px] rounded-bl-[3px]',
               // base color
-              'bg-[#e0e0e0]'
+              'bg-comp-gray-100'
             )}
           />
 
@@ -46,7 +46,7 @@ function AccordianToggle({ isExpanded, toggleExpanded }: AccordianToggleProps) {
         <div
           className={clsx(
             'mt-[10px]',
-            'text-[#aaa]',
+            'text-comp-gray-200',
             // Change color when hovering on the main container
             `group-hover/toggle-button:text-[#ffaec2]`
           )}

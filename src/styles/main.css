@@ -10,9 +10,11 @@
   --color-primary: light-dark(#333, oklch(0.923 0.003 48.717));
   --color-secondary: light-dark(#666, #aaa);
   --color--background: light-dark(#fff, #171717);
-  --color-accent: #4a90e2;
-  --color-comp-gray-100: #e0e0e0;
-  --color-comp-gray-200: #e0e0e0;
+  --color-accent: light-dark(#4a90e2, #447ab8);
+
+  /* Colors for accordian */
+  --color-comp-gray-100: light-dark(#e0e0e0, #323232);
+  --color-comp-gray-200: light-dark(#aaa, #787878);
 
   --font-weight-normal: 300;
   --font-weight-medium: 400;
