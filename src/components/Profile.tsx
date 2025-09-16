@@ -25,10 +25,10 @@ function ProfileLeft() {
 
       <div className="flex flex-col items-center text-center text-lg font-medium">
         <p>Machine Learning Ph.D. Student</p>
-        <p>@ Georgia Tech</p>
+        <p>@ University of Pennsylvania</p>
         <div className="mt-2.5 flex flex-row items-center gap-1.5">
           <FaLocationDot className="mb-0.5" />
-          <p>Atlanta, Georgia, USA</p>
+          <p>Philadelphia, PA, USA</p>
         </div>
       </div>
     </AnimateIn>
@@ -74,7 +74,7 @@ function SocialLinks() {
         label="LinkedIn"
         href="https://www.linkedin.com/in/vinam-arora/"
       />
-      <SocialLink icon={FaEnvelope} label="Email" href="mailto:vinam@gatech.edu" />
+      <SocialLink icon={FaEnvelope} label="Email" href="mailto:vinam@seas.upenn.edu" />
     </AnimateIn>
   );
 }
@@ -85,13 +85,13 @@ function ProfileRight() {
       {/* Introduction text */}
       <AnimateIn baseDelay={0.2} direction="right" staggerDelay={0.05}>
         <p className="mb-5 text-justify text-base leading-[25px] md:text-lg">
-          I am a second year Ph.D. student in Machine Learning at the Georgia Institute of
-          Technology, where I conduct my research at the{' '}
-          <Link href="https://dyerlab.gatech.edu/" className="underline">
+          I am a second year Ph.D. student in Machine Learning at the 
+          University of Pennsylvania, where I conduct my research at{' '}
+          <Link href="https://nerdslab.github.io/" className="underline">
             NerDS Lab
           </Link>{' '}
           and am advised by{' '}
-          <Link href="https://dyerlab.gatech.edu/people/pi-profile/" className="underline">
+          <Link href="https://nerdslab.github.io/people.html" className="underline">
             Prof. Eva Dyer
           </Link>
           .
