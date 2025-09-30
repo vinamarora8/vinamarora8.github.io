@@ -44,7 +44,7 @@
     background-color: var(--color-background);
 
     /* font smoothing */
-    -webkit-font-smoothing: antialiased;
+    /* -webkit-font-smoothing: antialiased; */
     -moz-osx-font-smoothing: grayscale;
   }
 
