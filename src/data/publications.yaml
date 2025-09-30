@@ -1,3 +1,32 @@
+- title: 'Know Thyself by Knowing: Others Learning Neuron Identity from Population Context'
+  authors:
+    - 'V. Arora'
+    - 'Divyansha L.'
+    - 'I. J. Knight'
+    - 'M. Azabou'
+    - 'B. Richards'
+    - 'C. Hurwitz'
+    - 'J. Siegle'
+    - 'E. L. Dyer'
+  venue: 'Accpted at Neural Information Processing Systems (NeurIPS)'
+  year: 2025
+  links:
+    paper: 'https://neurips.cc/virtual/2025/poster/115008' 
+  abstract: |
+    Identifying the functional identity of individual neurons is essential for
+    interpreting circuit dynamics, yet remains a major challenge in large-scale
+    in vivo recordings where anatomical and molecular labels are often unavailable.
+    Here we introduce NuCLR, a self-supervised framework that learns context-aware
+    representations of neuron identity by modeling each neuron's role within the 
+    broader population. NuCLR employs a spatiotemporal transformer that captures both
+    within-neuron dynamics and across-neuron interactions, and is trained with a
+    sample-wise contrastive objective that encourages stable, discriminative embeddings
+    across time. Across multiple open-access datasets, NuCLR outperforms prior methods
+    in both cell type and brain region classification. It enables zero-shot generalization
+    to entirely new populations—without retraining or access to stimulus labels—offering
+    a scalable approach for real-time, functional decoding of neuron identity across
+    diverse experimental settings.
+
 - title: 'Multi-session, multi-task neural decoding from distinct cell-types and brain regions'
   authors:
     - 'M. Azabou'
