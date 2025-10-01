@@ -24,7 +24,7 @@ function ProfileLeft() {
       </TiltEffect>
 
       <div className="flex flex-col items-center text-center text-lg font-medium">
-        <p>Machine Learning Ph.D. Student</p>
+        <p>Computer Science Ph.D. Student</p>
         <p>@ University of Pennsylvania</p>
         <div className="mt-2.5 flex flex-row items-center gap-1.5">
           <FaLocationDot className="mb-0.5" />
@@ -85,7 +85,7 @@ function ProfileRight() {
       {/* Introduction text */}
       <AnimateIn baseDelay={0.2} direction="right" staggerDelay={0.05}>
         <p className="mb-5 text-justify text-base leading-[25px] md:text-lg">
-          I am a second year Ph.D. student in Machine Learning at the 
+          I am a second year Computer Science Ph.D. student at the 
           University of Pennsylvania, where I conduct my research at{' '}
           <Link href="https://nerdslab.github.io/" className="underline">
             NerDS Lab
@@ -97,9 +97,10 @@ function ProfileRight() {
           .
         </p>
         <p className="mb-5 text-justify text-base leading-[25px] md:text-lg">
-          My areas of interest are Self-supervised Learning and Learning from large-scale data. I
-          like working with challenging datasets and am actively working on developing deep learning
-          methods for computational neuroscience, graphs, and timeseries.
+          My research focuses on deep learning, with an emphasis on self-supervised 
+          learning and large-scale data. I enjoy working with challenging datasets
+          and am developing new methods for computational neuroscience, graphs,
+          and time series.
         </p>
         <p className="mb-5 text-justify text-base leading-[25px] md:text-lg">
           I did my undergrad in Electronics and Communication Engineering from the Indian Institute
