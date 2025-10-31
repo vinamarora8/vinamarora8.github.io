@@ -11,13 +11,14 @@
   venue: 'Accepted at Neural Information Processing Systems (NeurIPS)'
   year: 2025
   links:
-    paper: 'https://neurips.cc/virtual/2025/poster/115008' 
+    paper: 'https://neurips.cc/virtual/2025/poster/115008'
+    openReview: 'https://openreview.net/forum?id=zt3RKc6VBp'
   abstract: |
     Identifying the functional identity of individual neurons is essential for
     interpreting circuit dynamics, yet remains a major challenge in large-scale
     in vivo recordings where anatomical and molecular labels are often unavailable.
     Here we introduce NuCLR, a self-supervised framework that learns context-aware
-    representations of neuron identity by modeling each neuron's role within the 
+    representations of neuron identity by modeling each neuron's role within the
     broader population. NuCLR employs a spatiotemporal transformer that captures both
     within-neuron dynamics and across-neuron interactions, and is trained with a
     sample-wise contrastive objective that encourages stable, discriminative embeddings
