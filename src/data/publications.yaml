@@ -8,10 +8,10 @@
     - 'C. Hurwitz'
     - 'J. Siegle'
     - 'E. L. Dyer'
-  venue: 'Accepted at Neural Information Processing Systems (NeurIPS)'
+  venue: 'Neural Information Processing Systems (NeurIPS)'
   year: 2025
   links:
-    paper: 'https://neurips.cc/virtual/2025/poster/115008'
+    paper: 'https://openreview.net/pdf?id=zt3RKc6VBp'
     openReview: 'https://openreview.net/forum?id=zt3RKc6VBp'
   abstract: |
     Identifying the functional identity of individual neurons is essential for
@@ -36,7 +36,7 @@
     - 'I. J. Knight'
     - 'E. L. Dyer'
     - 'B. Richards'
-  venue: 'Presented at International Conference on Learning Representations (ICLR)'
+  venue: 'International Conference on Learning Representations (ICLR)'
   year: 2024
   links:
     paper: 'https://openreview.net/pdf?id=IuU0wcO0mo'
@@ -66,7 +66,7 @@
     - 'M. Azabou'
     - 'V. Arora'
     - 'E. L. Dyer'
-  venue: 'arXiv Preprint'
+  venue: 'Preprint'
   year: 2024
   links:
     paper: 'https://arxiv.org/abs/2407.11907'
@@ -107,7 +107,7 @@
     - 'M. Perich'
     - 'G. Lajoie'
     - 'E. L. Dyer'
-  venue: 'Presented at Neural Information Processing Systems (NeurIPS)'
+  venue: 'Neural Information Processing Systems (NeurIPS)'
   year: 2023
   links:
     paper: 'https://arxiv.org/abs/2310.16046'
