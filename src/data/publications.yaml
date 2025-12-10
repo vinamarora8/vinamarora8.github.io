@@ -11,7 +11,9 @@
   venue: 'Neural Information Processing Systems (NeurIPS)'
   year: 2025
   links:
-    paper: 'https://openreview.net/pdf?id=zt3RKc6VBp'
+    paper: 'https://arxiv.org/abs/2512.01199'
+    project: 'https://nerdslab.github.io/nuclr'
+    poster: 'https://neurips.cc/media/PosterPDFs/NeurIPS%202025/115008.png?t=1765324874.3845232'
     openReview: 'https://openreview.net/forum?id=zt3RKc6VBp'
   abstract: |
     Identifying the functional identity of individual neurons is essential for
