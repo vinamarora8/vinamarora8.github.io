@@ -20,6 +20,7 @@ export default function Header() {
         <Link href="/#/career" newTab={false}>
           Career
         </Link>
+        <Link href="/cv.pdf">CV</Link>
       </AnimateIn>
     </div>
   );
