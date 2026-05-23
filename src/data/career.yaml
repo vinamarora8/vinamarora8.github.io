@@ -1,3 +1,16 @@
+- logo: '/images/career-logos/deepmind.png'
+  title: 'Student Researcher (Intern)'
+  venue: 'Google DeepMind, NY, USA'
+  timeline: 'May 2026 - ongoing'
+  description: |
+    <p>Working with the <i>Sound-Understanding</i> team.
+    <br/>
+    Mentored by
+    <a href="https://research.google/people/danellis/">Dan Ellis</a>
+    and
+    <a href="https://sites.google.com/view/jhamer/home/">JJ Hamer</a>.
+    </p>
+
 - logo: '/images/career-logos/upenn.png'
   title: 'Ph.D. in Computer Science'
   venue: 'University of Pennsylvania, PA, USA'
