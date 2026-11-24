@@ -1,16 +1,3 @@
-- logo: '/images/career-logos/deepmind.png'
-  title: 'Student Researcher (Intern)'
-  venue: 'Google DeepMind, NY, USA'
-  timeline: 'May 2026 - ongoing'
-  description: |
-    <p>Working with the <i>Sound-Understanding</i> team.
-    <br/>
-    Mentored by
-    <a href="https://research.google/people/danellis/">Dan Ellis</a>
-    and
-    <a href="https://sites.google.com/view/jhamer/home/">JJ Hamer</a>.
-    </p>
-
 - logo: '/images/career-logos/upenn.png'
   title: 'Ph.D. in Computer Science'
   venue: 'University of Pennsylvania, PA, USA'
@@ -27,6 +14,19 @@
     <a href="https://github.com/neuro-galaxy/torch_brain">torch-brain</a>,
     an open-source PyTorch-based framework for optimizing the deep-learning toolbox for
     neural data
+    </p>
+
+- logo: '/images/career-logos/deepmind.png'
+  title: 'Student Researcher (Intern)'
+  venue: 'Google DeepMind, NY, USA'
+  timeline: 'May 2026 - Aug 2026'
+  description: |
+    <p>Worked with the <i>Sound-Understanding</i> team, training Audio-Language Models.
+    <br/>
+    Hosted by
+    <a href="https://research.google/people/danellis/">Dan Ellis</a>
+    and
+    <a href="https://sites.google.com/view/jhamer/home/">JJ Hamer</a>.
     </p>
 
 - logo: '/images/career-logos/gt.png'
