@@ -166,7 +166,7 @@ I also co-created and now maintain
 an open-source PyTorch-based framework for optimizing the deep-learning toolbox for
 neural data
 </p>
-`},{logo:"/images/career-logos/deepmind.png",title:"Student Researcher (Intern)",venue:"Google DeepMind, NY, USA",timeline:"May 2026 - Aug 2026",description:`<p>Worked with the <i>Sound-Understanding</i> team, training Audio-Language Models.
+`},{logo:"/images/career-logos/deepmind.png",title:"Student Researcher",venue:"Google DeepMind, NY, USA",timeline:"May 2026 - Aug 2026",description:`<p>Worked with the <i>Sound-Understanding</i> team, training Audio-Language Models.
 <br/>
 Hosted by
 <a href="https://research.google/people/danellis/">Dan Ellis</a>
@@ -174,7 +174,7 @@ and
 <a href="https://sites.google.com/view/jhamer/home/">JJ Hamer</a>.
 </p>
 `},{logo:"/images/career-logos/gt.png",title:"Ph.D. in Machine Learning (transferred to UPenn)",venue:"Georgia Institute of Technology, GA, USA",timeline:"2024 - 2025",description:`<p>Moved to the University of Pennsylvania after 3 semesters along with my advisor.</p>
-`},{logo:"/images/career-logos/rivos.png",title:"Internship - Microarchitecture Engineer",venue:"Rivos Inc., CA, USA",timeline:"Summer 2023",description:`<p>
+`},{logo:"/images/career-logos/rivos.png",title:"Microarchitecture Engineering Intern",venue:"Rivos Inc., CA, USA",timeline:"Summer 2023",description:`<p>
 At Rivos, a chip-design startup, I developed a power and network limiters for
 a machine learning accelerator, gaining deep insights into GPU architecture. This
 experience informs my approach to designing efficient, large-scale deep
